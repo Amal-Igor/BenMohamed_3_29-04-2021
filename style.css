@@ -48,3 +48,9 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+@font-face {
+  font-family: "shrikhand";
+  src: url(font/Shrikhand/Shrikhand-Regular.ttf);
+}
