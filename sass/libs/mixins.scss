@@ -1,0 +1,16 @@
+@mixin subsection-head{
+    font-family: 'roboto';
+    font-size: 23px;
+    font-weight: bold;
+}
+
+@mixin figure-reset{
+    margin-block-start: inherit;
+    margin-block-end: inherit;
+    margin-inline-start: inherit;
+    margin-inline-end: inherit;
+}
+
+@mixin new-restaurant{
+    
+}
