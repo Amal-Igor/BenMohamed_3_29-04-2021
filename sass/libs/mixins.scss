@@ -12,5 +12,36 @@
 }
 
 @mixin new-restaurant{
-    
+    content: "Nouveau";
+    position: relative;
+    color: darken($tertiary, 42%);
+    bottom: 215px;
+    left: 376px;
+    background-color: $tertiary;
+    width: 85px;
+    text-align: center;
+    font-family: "roboto-bold";
+    font-size: 16px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: -26px;
+}
+
+
+@mixin like{
+    content: "\f004";
+    position: relative;
+    left: 12.5em;
+    bottom: 1.5em;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 100;
+    font-size: 26px;
+     
+}
+
+@mixin like-animation{
+    color: $secondary;
+    background-color: linear-gradient(to bottom right, $secondary, $primary) ;
 }
