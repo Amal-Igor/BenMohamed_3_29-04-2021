@@ -17,33 +17,94 @@
     src: url(font/Roboto/Roboto-Bold.ttf);
 }
 
+@font-face{
+    font-family:"roboto-thin";
+    src: url(font/Roboto/Roboto-Thin.ttf);
+}
+
 
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
 
 $grey: rgb(234, 234, 234);
+$gradient: linear-gradient($secondary, $primary);
+
 
 *{
     box-sizing: border-box;
+}
+
+body{
+    margin:inherit;
 }
 header{
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
     
 
     .logo {
         text-decoration: none;
         color:black;
         font-family: 'shrikhand';
-        font-size: 2.75rem;
+        font-size: 2.15rem;
         text-align: center;
         min-width: max-content;
     }
+
+    .return-anchor{
+        position: absolute;
+        left: 33px;
+    }
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    height: 14em;
+    background-color: darken($grey, 70%);
+    color:white;
+
+    a{
+        text-decoration: none;
+    }
+
+
+    .foot-it{
+        font-family: 'roboto';
+        padding-left: 23px;
+        color:white;
+        margin-bottom: 0.75em;
+    }
+
+    .foot-it::before{
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    
+    .foot-it:nth-child(2)::before{
+        content:"\f2e7";
+    }
+
+    .foot-it:nth-child(3)::before{
+        content:"\f4c4";
+    }
+
+    .logo-footer{
+        font-family: "shrikhand";
+        padding-left: 23px;
+        font-size: 21px;
+        font-weight: 200;
+    }
+}
+
+/* INDEX */ /* INDEX */ /* INDEX */ /* INDEX */ /* INDEX */
 .searchbar{
     width: 100%;
     height: 3rem;
@@ -111,9 +172,15 @@ header{
 }
 
 .operation{
-    margin-bottom:6em;
     h2{
         @include subsection-head;
+    }
+
+    ol{
+        padding-inline-start: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     li::before {
@@ -126,7 +193,7 @@ header{
         font-size: 15px;
         font-weight: 100;
         position: absolute;
-        left: 49px;
+        left: 4px;
         background-color: $primary;
         display:flex;
         justify-content: center;
@@ -140,7 +207,7 @@ header{
     li::after{
             color: grey;
             position: absolute;
-            left: 80px;
+            left: 36px;
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
             font-size: 19px;
@@ -170,7 +237,7 @@ header{
         height: 69px;
         font-weight: bold;
         font-size: 17px;
-        padding-top: 23px; 
+        align-items: center;
         text-align: center;
         display: flex;
         justify-content: flex-start;
@@ -178,14 +245,15 @@ header{
         box-shadow: 0px 3px 9px rgb(88 84 84 / 41%);
         border-radius: 10px;
         background-color: rgb(146 138 138 / 5%);
-        width: 100%;
+        width: 86%;
+        position: relative;
     }
 
     li:active{
         background-color: rgba($primary, 0.2);
     }
 
-    li:active::after{
+    li:active::after, li:hover::after{
         color: $primary;
     }
 
@@ -195,7 +263,9 @@ header{
         justify-content: center;
         align-items: center;
         height: 89rem;
-        background-color: lighten($grey, 25%);
+        background-color: #f2f2f2;
+        /*lighten($grey, 25%);*/
+        
         h2{
             @include subsection-head;
             margin-top: 0;
@@ -209,17 +279,18 @@ header{
 
         .restaurant-card{
             width: 93%;
-            height: 19em;
+            height: 17em;
             display: flex;
             flex-direction: column;
             box-shadow: 0px 4px 10px -5px rgba(0,0,0,0.7);
             margin-bottom: 1em;
             border-radius: 16px;
+            position: relative;
         }
 
         figure{
             @include figure-reset;
-            height: 100%;
+            height: 97%;
         }
 
         img{
@@ -228,15 +299,35 @@ header{
                 width: 100%;
                 border-radius: 16px 16px 0 0;
         }
+        
+        .--new-restaurant::before{
+            @include new-restaurant;
+        }
 
        
+        i{
+            font-family: "Font Awesome 5 Free";
+            margin-left: auto;
+            margin-top: -34px;
+            font-size: 22px;
+            font-weight: 100;
+            margin-right: 34px;
+        }
+
+        i:hover{
+        @include like-animation;
+        }
+
+
         .rest-name{
-                display: flex;
-                flex-direction: column;
-                font-family: 'roboto-bold';
-                font-size: 18px;
-                padding-top: 10px;
-                padding-left: 13px;
+            display: flex;
+            flex-direction: column;
+            font-family: "roboto-bold";
+            font-size: 18px;
+            padding-top: 10px;
+            padding-left: 13px;
+            align-self: flex-start;
+            width: 100%;
         }
 
     
@@ -246,49 +337,122 @@ header{
         }
     }
     
+/* INDEX */ /* INDEX */ /* INDEX */ /* INDEX */ /* INDEX */
 
-footer{
-    display: flex;
-    flex-direction: column;
-    height: 14em;
-    background-color: darken($grey, 70%);
-    color:white;
 
-    a{
-        text-decoration: none;
+/* MENU */ /* MENU */ /* MENU */ /* MENU */ /* MENU */ /* MENU */
+
+.menu-figure{
+    @include figure-reset;
+    position: relative;
+    margin-bottom: 1em;
+
+    .menu-img{
+        object-fit: cover;
+        height: 16rem;
+        width: 100%;
     }
 
-
-    .foot-it{
-        font-family: 'roboto';
-        padding-left: 23px;
-        color:white;
-        margin-bottom: 0.75em;
-    }
-
-    .foot-it::before{
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        font-size: 16px;
-        margin-right: 10px;
-    }
-    
-    .foot-it:nth-child(2)::before{
-        content:"\f2e7";
-    }
-
-    .foot-it:nth-child(3)::before{
-        content:"\f4c4";
-    }
-
-    .logo-footer{
+    .menu-caption{
+        align-self: flex-start;
         font-family: "shrikhand";
-        padding-left: 23px;
-        font-size: 21px;
-        font-weight: 200;
+        font-size: 24px;
+        padding-left: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0px;
+        background-color: white;
+        height: 60px;
+        padding-top: 22px;
+        padding-left: 16px;
+        border-radius: 32px 32px 0 0
+    }
+
+    .--like-menu{
+        align-self: center;
+        padding-right: 30px;
+    }
+
+    .--like-menu:hover{
+        @include like-animation;
     }
 }
 
+.menu-section{
+    position: relative;
+    margin-bottom: 2em;
+    flex-direction: column;
+    align-items: center;
+
+    .menu-header{
+        font-family: 'roboto-thin';
+        font-size: 18px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        align-self: flex-start;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 42px;
+            border-top: 3px solid $tertiary;
+            top: 22px;
+        }
+    }
+
+    .menu-item{
+        height: 4rem;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'roboto';
+        margin: 17px 0;
+        border-radius: 13px;
+        box-shadow:0px 8px 6px -4px lightgrey;
+    }
+
+    .dish-name{
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: 1em;
+        padding-left: 5px;
+    }
+
+    .dish-detail{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 24px;
+
+        .price{
+            font-weight: bold;
+        }
+    }
+}
+
+.order-button{
+    width: 12rem;
+    height: 3rem;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom right, $secondary, $primary);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 1px 6px 9px rgba(88, 84, 84, 0.411);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.75em auto; 
+}
+
+ /* MENU */ /* MENU */ /* MENU */ /* MENU */ /* MENU */ /* MENU */ 
 
 
 
