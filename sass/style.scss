@@ -305,7 +305,7 @@ footer{
         }
 
        
-        i{
+        .__like-icon{
             font-family: "Font Awesome 5 Free";
             margin-left: auto;
             margin-top: -34px;
@@ -313,11 +313,6 @@ footer{
             font-weight: 100;
             margin-right: 34px;
         }
-
-        i:hover{
-        @include like-animation;
-        }
-
 
         .rest-name{
             display: flex;
@@ -336,7 +331,56 @@ footer{
                 font-family: 'roboto';
         }
     }
+
+
+.__like-icon{
+    overflow: hidden;
+    transition: opacity 350ms;
+    background-color: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.__like-icon:hover{
+    /*
+        background-color: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%);
+        background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); */
+        animation: like-test 6s infinite;
+        font-weight: 900;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        -moz-background-clip: text;
+}
+
+
+@keyframes like-test{
+    0%{background: $primary ; 
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        -moz-background-clip: text; }
+    25%{
+        background: $secondary ;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        -moz-background-clip: text;}
+
+    50%{background: $primary ; 
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        -moz-background-clip: text; }
     
+
+    100%{background: $secondary ;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        -moz-background-clip: text;}
+    }
+
+
 /* INDEX */ /* INDEX */ /* INDEX */ /* INDEX */ /* INDEX */
 
 
@@ -371,14 +415,11 @@ footer{
         border-radius: 32px 32px 0 0
     }
 
-    .--like-menu{
+    .__like-icon{
         align-self: center;
         padding-right: 30px;
     }
 
-    .--like-menu:hover{
-        @include like-animation;
-    }
 }
 
 .menu-section{
@@ -413,7 +454,24 @@ footer{
         margin: 17px 0;
         border-radius: 13px;
         box-shadow:0px 8px 6px -4px lightgrey;
+        flex-wrap: wrap;
+        
+
+        h4{
+            overflow: hidden;
+        }
+
+        .checkbox{
+            background-color: $tertiary;
+            align-self: flex-end;
+            height: 100%;
+            border: solid;
+        }
+
+
     }
+
+
 
     .dish-name{
         margin-block-start: 0;
@@ -430,10 +488,16 @@ footer{
         padding-left: 5px;
         padding-right: 24px;
 
+        span{
+            overflow: hidden;
+        }
+
         .price{
             font-weight: bold;
         }
     }
+
+    
 }
 
 .order-button{
@@ -456,5 +520,85 @@ footer{
 
 
 
+/** TESTTTTT*/
 
+.test-item{
+    font-family: 'roboto';
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 1em 0;
+    height: 4em;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+
+    .test-name{
+    display: inherit;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    }
+
+    .test-price{
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    margin-right: .75em;
+    
+    }
+
+    .header-sec{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    }
+
+    .header-sec, .test-price{
+    padding: .5em 0;
+    }
+
+    .test-checkbox{
+    width: 0;
+    height: 100%;
+    transition: width 600ms ease-in-out;
+    background-color: $tertiary;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    }
+
+    &:hover .test-checkbox{
+    width: 5em;
+    padding: inherit;
+    height: 100%;
+    }
+
+    &:hover .checkbox__icon{
+        visibility: inherit;
+        transform: rotate(360deg);
+
+    }
+
+    .checkbox__icon{
+        transition: transform 500ms ease-in-out;
+        position: relative;
+        font-weight: 900;
+        color: white;
+        font-size: 21px;
+        
+    }
+
+
+}
+
+
+@keyframes rotation {
+    from{transform: rotate(1deg);}
+    to{transform: rotate(360deg);}
+}
 
