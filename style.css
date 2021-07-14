@@ -321,7 +321,7 @@ li:active::after, li:hover::after {
   /*
       background-color: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%);
       background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); */
-  animation: like-test 6s infinite;
+  animation: like-test 4s infinite;
   font-weight: 900;
   background-clip: text;
   -webkit-background-clip: text;
@@ -329,9 +329,28 @@ li:active::after, li:hover::after {
   -moz-background-clip: text;
 }
 
+.__like-icon:focus {
+  font-weight: 900;
+  background: -moz-linear-gradient(189deg, #9356dc 0%, #ff79da 62%);
+  background: linear-gradient(189deg, #9356dc 0%, #ff79da 62%);
+  background: linear-gradient(189deg, #9356dc 0%, #ff79da 62%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*ANIMATONS */
+/*ANIMATONS */
+/*ANIMATONS */
+/*ANIMATONS */
+/*ANIMATONS */
+/*ANIMATONS */
+/*ANIMATONS */
+/*ANIMATONS */
 @keyframes like-test {
   0% {
-    background: #9356DC;
+    background: #FF79DA;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -359,6 +378,13 @@ li:active::after, li:hover::after {
     -moz-background-clip: text;
   }
 }
+/*ANIMATONS */
+/*ANIMATONS */
+/*ANIMATONS */
+/*ANIMATONS */
+/*ANIMATONS */
+/*ANIMATONS */
+/*ANIMATONS */
 /* INDEX */
 /* INDEX */
 /* INDEX */
@@ -494,6 +520,60 @@ li:active::after, li:hover::after {
 /* MENU */
 /* MENU */
 /** TESTTTTT*/
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*
+.test-item:nth-of-type(1) { --nth-child: 1 }
+.test-item:nth-of-type(2){ --nth-child: 2 }
+.test-item:nth-of-type(3){ --nth-child: 3 }
+.test-item:nth-of-type(4){ --nth-child: 4 }
+*/
+.menu-section article:nth-child(1n) {
+  animation-delay: 0.3s;
+}
+
+.menu-section article:nth-child(2n) {
+  animation-delay: 0.6s;
+}
+
+.menu-section article:nth-child(3n) {
+  animation-delay: 0.9s;
+}
+
+.menu-section article:nth-child(4n) {
+  animation-delay: 1.2s;
+}
+
+.menu-section article:nth-child(5n) {
+  animation-delay: 1.5s;
+}
+
+.menu-section article:nth-child(6n) {
+  animation-delay: 1.8s;
+}
+
+.menu-section article:nth-child(7n) {
+  animation-delay: 2.1s;
+}
+
+.menu-section article:nth-child(8n) {
+  animation-delay: 2.4s;
+}
+
+.menu-section article:nth-child(9n) {
+  animation-delay: 2.7s;
+}
+
+.menu-section article:nth-child(10n) {
+  animation-delay: 3s;
+}
+
 .test-item {
   font-family: "roboto";
   display: flex;
@@ -506,6 +586,8 @@ li:active::after, li:hover::after {
   width: 100%;
   overflow: hidden;
   border-radius: 12px;
+  animation: fade 2.2s forwards;
+  opacity: 0;
 }
 .test-item .test-name {
   display: inherit;
@@ -529,7 +611,7 @@ li:active::after, li:hover::after {
 .test-item .test-checkbox {
   width: 0;
   height: 100%;
-  transition: width 600ms ease-in-out;
+  transition: width 400ms ease-in-out;
   background-color: #99E2D0;
   position: relative;
   display: flex;
@@ -548,7 +630,7 @@ li:active::after, li:hover::after {
   transform: rotate(360deg);
 }
 .test-item .checkbox__icon {
-  transition: transform 500ms ease-in-out;
+  transition: transform 400ms ease-in-out;
   position: relative;
   font-weight: 900;
   color: white;

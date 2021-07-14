@@ -344,7 +344,7 @@ footer{
     /*
         background-color: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%);
         background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); */
-        animation: like-test 6s infinite;
+        animation: like-test 4s infinite;
         font-weight: 900;
         background-clip: text;
         -webkit-background-clip: text;
@@ -352,13 +352,25 @@ footer{
         -moz-background-clip: text;
 }
 
+.__like-icon:focus{
+    font-weight: 900;      
+    background:-moz-linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
+    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
+    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
 
+ /*ANIMATONS */  /*ANIMATONS */  /*ANIMATONS */  /*ANIMATONS */  /*ANIMATONS */  /*ANIMATONS */  /*ANIMATONS */  /*ANIMATONS */  
 @keyframes like-test{
-    0%{background: $primary ; 
+    0%{background: $secondary ; 
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color:transparent;
-        -moz-background-clip: text; }
+        -moz-background-clip: text;}
+
     25%{
         background: $secondary ;
         background-clip: text;
@@ -379,6 +391,14 @@ footer{
         -webkit-text-fill-color:transparent;
         -moz-background-clip: text;}
     }
+
+
+
+
+
+
+
+ /*ANIMATONS */  /*ANIMATONS */  /*ANIMATONS */  /*ANIMATONS */  /*ANIMATONS */  /*ANIMATONS */  /*ANIMATONS */ 
 
 
 /* INDEX */ /* INDEX */ /* INDEX */ /* INDEX */ /* INDEX */
@@ -521,6 +541,23 @@ footer{
 
 
 /** TESTTTTT*/
+@keyframes fade { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+/*
+.test-item:nth-of-type(1) { --nth-child: 1 }
+.test-item:nth-of-type(2){ --nth-child: 2 }
+.test-item:nth-of-type(3){ --nth-child: 3 }
+.test-item:nth-of-type(4){ --nth-child: 4 }
+*/
+
+
+@for $i from 1 through 10 {
+    .menu-section article:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.3}s;
+    }
+}
+
+
 
 .test-item{
     font-family: 'roboto';
@@ -534,6 +571,9 @@ footer{
     width: 100%;
     overflow: hidden;
     border-radius: 12px;
+    animation: fade 2.2s forwards;
+    
+    opacity: 0;
 
     .test-name{
     display: inherit;
@@ -562,7 +602,7 @@ footer{
     .test-checkbox{
     width: 0;
     height: 100%;
-    transition: width 600ms ease-in-out;
+    transition: width 400ms ease-in-out;
     background-color: $tertiary;
     position: relative;
     display: flex;
@@ -585,7 +625,7 @@ footer{
     }
 
     .checkbox__icon{
-        transition: transform 500ms ease-in-out;
+        transition: transform 400ms ease-in-out;
         position: relative;
         font-weight: 900;
         color: white;
