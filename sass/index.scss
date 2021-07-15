@@ -1,0 +1,266 @@
+@import "libs/responsive.scss";
+@import "libs/mixins.scss";
+
+@font-face {
+    font-family: "shrikhand";
+    src: url(font/Shrikand/Shrikhand-Regular.ttf);
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(font/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "roboto-bold";
+    src: url(font/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face{
+    font-family:"roboto-thin";
+    src: url(font/Roboto/Roboto-Thin.ttf);
+}
+
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+
+$grey: rgb(234, 234, 234);
+$gradient: linear-gradient($secondary, $primary);
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:inherit;
+}
+
+.searchbar{
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Font Awesome 5 Free', 'roboto' ;
+    font-weight: 700;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: $grey;
+    border: none;
+    background-image: linear-gradient(darken($grey, 20%), $grey 10%);
+        
+    &::placeholder{
+        color: black;
+        opacity: .75;
+        word-spacing: 10px;
+    }
+
+
+}  
+
+.browsing{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'roboto';
+    height:18em;
+    margin-bottom: 5rem;
+    background-color: lighten($grey, 25%);
+
+    >*{
+        margin-bottom: auto;
+    }
+    h1:first-child{
+        font-family: 'roboto-bold';
+    }
+
+    h1{
+        font-weight: 300;
+        font-size: 24px;
+        width: 70%;
+        text-align: center;
+    }
+
+    p{
+        color: rgb(92, 87, 87);
+        font-size: 18px;
+        text-align: center;
+        width: 89%;
+        margin-bottom: 1.5em;
+    }
+
+    button{
+        width: 15rem;
+        height: 3rem;
+        border-radius: 25px;
+        background-image: linear-gradient(to bottom right, $secondary, $primary);
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        box-shadow: 1px 6px 9px rgba(88, 84, 84, 0.411);
+    }
+}
+
+.operation{
+    h2{
+        @include subsection-head;
+    }
+
+    ol{
+        padding-inline-start: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li::before {
+        content: counter(li);
+        color: white;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 100;
+        position: absolute;
+        left: 4px;
+        background-color: $primary;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 65%;
+        width:26px;
+        height: 26px;
+    }
+
+    
+    li::after{
+            color: grey;
+            position: absolute;
+            left: 36px;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 19px;
+        }
+    }
+
+    li:nth-child(1)::after {
+        content: '\f3cd';
+        font-weight: 900;
+    }
+
+    li:nth-child(2)::after {
+        content: '\f0ca';
+        font-weight: 900;
+    }
+
+    li:nth-child(3)::after {
+        content: '\f54e';
+        font-weight: 900;
+    }
+
+    li {
+        list-style-type: none;
+        counter-increment: li;
+        font-family: 'roboto-bold';
+        margin: 20px 0;
+        height: 69px;
+        font-weight: bold;
+        font-size: 17px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 70px;
+        box-shadow: 0px 3px 9px rgb(88 84 84 / 41%);
+        border-radius: 10px;
+        background-color: rgb(146 138 138 / 5%);
+        width: 86%;
+        position: relative;
+    }
+
+    li:active{
+        background-color: rgba($primary, 0.2);
+    }
+
+    li:active::after, li:hover::after{
+        color: $primary;
+    }
+
+    .restaurant{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 89rem;
+        background-color: #f2f2f2;
+        /*lighten($grey, 25%);*/
+        
+        h2{
+            @include subsection-head;
+            margin-top: 0;
+            margin-right: auto;
+        }
+        
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .restaurant-card{
+            width: 93%;
+            height: 17em;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 4px 10px -5px rgba(0,0,0,0.7);
+            margin-bottom: 1em;
+            border-radius: 16px;
+            position: relative;
+        }
+
+        figure{
+            @include figure-reset;
+            height: 97%;
+        }
+
+        img{
+                object-fit: cover;
+                height: 74%;
+                width: 100%;
+                border-radius: 16px 16px 0 0;
+        }
+        
+        .--new-restaurant::before{
+            @include new-restaurant;
+        }
+
+       
+        .__like-icon{
+            font-family: "Font Awesome 5 Free";
+            margin-left: auto;
+            margin-top: -34px;
+            font-size: 22px;
+            font-weight: 100;
+            margin-right: 34px;
+        }
+
+        .rest-name{
+            display: flex;
+            flex-direction: column;
+            font-family: "roboto-bold";
+            font-size: 18px;
+            padding-top: 10px;
+            padding-left: 13px;
+            align-self: flex-start;
+            width: 100%;
+        }
+
+    
+
+        .rest-location{
+                font-family: 'roboto';
+        }
+    }
