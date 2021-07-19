@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "shrikhand";
+  src: url(font/Shrikand/Shrikhand-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto";
+  src: url(font/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url(font/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "roboto-thin";
+  src: url(font/Roboto/Roboto-Thin.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: inherit;
+}
+
+.menu-figure {
+  display: inherit;
+  margin-block-start: inherit;
+  margin-block-end: inherit;
+  margin-inline-start: inherit;
+  margin-inline-end: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1em;
+}
+.menu-figure .menu-img {
+  object-fit: cover;
+  height: 16rem;
+  width: 100%;
+}
+.menu-figure .menu-caption {
+  align-self: flex-start;
+  font-family: "shrikhand";
+  font-size: 24px;
+  padding-left: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+  height: 60px;
+  padding-top: 22px;
+  padding-left: 16px;
+  border-radius: 32px 32px 0 0;
+}
+.menu-figure .__like-icon {
+  align-self: center;
+  padding-right: 30px;
+}
+
+.menu-section {
+  position: relative;
+  margin-bottom: 2em;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-section .menu-header {
+  font-family: "roboto-thin";
+  font-size: 18px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  align-self: flex-start;
+}
+.menu-section .menu-header::before {
+  content: "";
+  position: absolute;
+  width: 42px;
+  border-top: 3px solid #99E2D0;
+  top: 22px;
+}
+.menu-section .menu-item {
+  height: 4rem;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "roboto";
+  margin: 17px 0;
+  border-radius: 13px;
+  box-shadow: 0px 8px 6px -4px lightgrey;
+  flex-wrap: wrap;
+}
+.menu-section .menu-item h4 {
+  overflow: hidden;
+}
+.menu-section .menu-item .checkbox {
+  background-color: #99E2D0;
+  align-self: flex-end;
+  height: 100%;
+  border: solid;
+}
+.menu-section .dish-name {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 1em;
+  padding-left: 5px;
+}
+.menu-section .dish-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  padding-left: 5px;
+  padding-right: 24px;
+}
+.menu-section .dish-detail span {
+  overflow: hidden;
+}
+.menu-section .dish-detail .price {
+  font-weight: bold;
+}
+
+.order-button {
+  width: 12rem;
+  height: 3rem;
+  border-radius: 25px;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 1px 6px 9px rgba(88, 84, 84, 0.411);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.75em auto;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+#item-1 {
+  animation-delay: 0ms;
+}
+
+#item-2 {
+  animation-delay: 400ms;
+}
+
+#item-3 {
+  animation-delay: 800ms;
+}
+
+#item-4 {
+  animation-delay: 1200ms;
+}
+
+#item-5 {
+  animation-delay: 1600ms;
+}
+
+#item-6 {
+  animation-delay: 2000ms;
+}
+
+#item-7 {
+  animation-delay: 2400ms;
+}
+
+#item-8 {
+  animation-delay: 2800ms;
+}
+
+#item-9 {
+  animation-delay: 3200ms;
+}
+
+.test-item {
+  font-family: "roboto";
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 1em 0;
+  height: 4em;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  animation: fade 850ms forwards;
+  opacity: 0;
+}
+.test-item .test-name {
+  display: inherit;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.test-item .test-price {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  margin-right: 0.75em;
+}
+.test-item .header-sec {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.test-item .header-sec, .test-item .test-price {
+  padding: 0.5em 0;
+}
+.test-item .test-checkbox {
+  width: 0;
+  height: 100%;
+  transition: width 400ms ease-in-out;
+  background-color: #99E2D0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.test-item:hover .test-checkbox {
+  width: 5em;
+  padding: inherit;
+  height: 100%;
+}
+.test-item:hover .checkbox__icon {
+  visibility: inherit;
+  transform: rotate(360deg);
+}
+.test-item .checkbox__icon {
+  transition: transform 400ms ease-in-out;
+  position: relative;
+  font-weight: 900;
+  color: white;
+  font-size: 21px;
+}
+
+/*# sourceMappingURL=menu-style.css.map */
