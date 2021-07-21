@@ -1,4 +1,4 @@
-/*.__like-button{
+.__like-button{
     height: 2.3em;
     width: 2.3em;
     margin-right: 24px;
@@ -57,15 +57,19 @@
    
       }
     }
-    */
+    
 
     @import "libs/responsive.scss";
     @import "libs/mixins.scss";
 
 @keyframes like-test {@include like-animation; }
 
-@keyframes fade {  @include card-animation-mobile;}
+@keyframes fade {  0% { opacity: 0;  
+    transform: translateY(50%);} 
+    100% { opacity: 1; 
+    transform: translateY(0%);}}
 
+    
 @keyframes like-2-test{
     0%{
     visibility: visible;

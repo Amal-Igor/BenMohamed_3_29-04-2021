@@ -1,63 +1,53 @@
-/*.__like-button{
-    height: 2.3em;
-    width: 2.3em;
-    margin-right: 24px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: none;
-
-    &:hover .--like2{
-        visibility: visible;
-        animation: like-test 400ms forwards;
-    }
-
-    &:hover .--like1{
-        animation: like-test 385ms 15ms forwards   ;
-
-    }
-
-    .__like-icon{
-        position: absolute;
-    }
-
-    .--like1{
-        font-size: 20px;
-    }
-
-    .--like2{
-        font-size: 13px;
-        visibility: hidden;
-    }
+.__like-button {
+  height: 2.3em;
+  width: 2.3em;
+  margin-right: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.__like-button:hover .--like2 {
+  visibility: visible;
+  animation: like-test 400ms forwards;
+}
+.__like-button:hover .--like1 {
+  animation: like-test 385ms 15ms forwards;
+}
+.__like-button .__like-icon {
+  position: absolute;
+}
+.__like-button .--like1 {
+  font-size: 20px;
+}
+.__like-button .--like2 {
+  font-size: 13px;
+  visibility: hidden;
 }
 
-
 @keyframes like-test {
-    0% {
-      font-weight: bold;
-      background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-      background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      opacity: 0;
-   }
-
-   25%{
-       opacity: .6;
-   }
-      100% {
-        font-weight: bold;
-        background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-        background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 1;
-
-      }
-    }
-    */
+  0% {
+    font-weight: bold;
+    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.6;
+  }
+  100% {
+    font-weight: bold;
+    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+  }
+}
 /*
 @mixin like-animation{
     font-weight: 900;      
