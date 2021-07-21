@@ -1,3 +1,31 @@
+/** FONTS **/  /** FONTS **/  /** FONTS **/  /** FONTS **/  /** FONTS **/
+
+@font-face {
+    font-family: "shrikhand";
+    src: url(font/Shrikand/Shrikhand-Regular.ttf);
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(font/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "roboto-bold";
+    src: url(font/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face{
+    font-family:"roboto-thin";
+    src: url(font/Roboto/Roboto-Thin.ttf);
+}
+
+
+
+  /** FONTS **/  /** FONTS **/  /** FONTS **/  /** FONTS **/  /** FONTS **/  /** FONTS **/
+
+
+ /** VARIABLES **/ /** VARIABLES **/ /** VARIABLES **/ /** VARIABLES **/
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
@@ -5,6 +33,7 @@ $tertiary: #99E2D0;
 $grey: rgb(234, 234, 234);
 $gradient: linear-gradient($secondary, $primary);
 
+/** VARIABLES **/ /** VARIABLES **/ /** VARIABLES **/ /** VARIABLES **/
 header{
     width: 100%;
     display: flex;
