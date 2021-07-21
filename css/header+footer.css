@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/** FONTS **/
+/** FONTS **/
+/** FONTS **/
+/** FONTS **/
+/** FONTS **/
+@font-face {
+  font-family: "shrikhand";
+  src: url(font/Shrikand/Shrikhand-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto";
+  src: url(font/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url(font/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "roboto-thin";
+  src: url(font/Roboto/Roboto-Thin.ttf);
+}
+/** FONTS **/
+/** FONTS **/
+/** FONTS **/
+/** FONTS **/
+/** FONTS **/
+/** FONTS **/
+/** VARIABLES **/
+/** VARIABLES **/
+/** VARIABLES **/
+/** VARIABLES **/
+/** VARIABLES **/
+/** VARIABLES **/
+/** VARIABLES **/
+/** VARIABLES **/
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+header .logo {
+  text-decoration: none;
+  color: black;
+  font-family: "shrikhand";
+  font-size: 2.15rem;
+  text-align: center;
+  min-width: max-content;
+}
+header .return-anchor {
+  position: absolute;
+  left: 33px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  height: 14em;
+  background-color: #383838;
+  color: white;
+}
+footer a {
+  text-decoration: none;
+}
+footer .foot-it {
+  font-family: "roboto";
+  padding-left: 23px;
+  color: white;
+  margin-bottom: 0.75em;
+}
+footer .foot-it::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 16px;
+  margin-right: 10px;
+}
+footer .foot-it:nth-child(2)::before {
+  content: "";
+}
+footer .foot-it:nth-child(3)::before {
+  content: "";
+}
+footer .logo-footer {
+  font-family: "shrikhand";
+  padding-left: 23px;
+  font-size: 21px;
+  font-weight: 200;
+}
+
+/*# sourceMappingURL=header+footer.css.map */

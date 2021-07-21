@@ -1,0 +1,101 @@
+@mixin subsection-head{
+    font-family: 'roboto';
+    font-size: 23px;
+    font-weight: bold;
+}
+
+@mixin figure-reset{
+    margin-block-start: inherit;
+    margin-block-end: inherit;
+    margin-inline-start: inherit;
+    margin-inline-end: inherit;
+}
+
+@mixin new-restaurant{
+    content: "Nouveau";
+    position: absolute;
+    color: darken($tertiary, 42%);
+    top: 14px;
+    right: 20px;
+    background-color: $tertiary;
+    width: 72px;
+    text-align: center;
+    font-family: "roboto";
+    font-weight: 600;
+    font-size: 13px;
+    height: 18px;
+}
+
+
+@mixin like{
+    content: "\f004";
+    position: absolute;
+    right: 32px;
+    bottom: 28px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 1;
+    font-size: 29px;
+
+     
+}
+
+
+@mixin order-button{
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 1px 6px 9px rgb(88 84 84 / 41%);
+}
+
+
+@mixin figure-reset{
+    display: inherit;
+    margin-block-start: inherit;
+    margin-block-end: inherit;
+    margin-inline-start: inherit;
+    margin-inline-end: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin like-animation {
+0% {
+    font-weight: bold;
+    background: rgb(147,86,220);
+    background: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    font-size: 18px;
+    visibility: inherit;
+ }
+
+
+    100% {
+      font-weight: bold;
+      background: rgb(147,86,220);
+      background: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 1;
+      font-size:20px;
+        transform: scale(1.1)
+    }
+  }
+
+@mixin like-1{animation: like-test 950ms 100ms forwards;}
+
+/*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
+
+
+
+@mixin card-animation-mobile{
+    0% { opacity: 0;  
+    transform: translateY(50%);} 
+    100% { opacity: 1; 
+    transform: translateY(0%);} 
+}
