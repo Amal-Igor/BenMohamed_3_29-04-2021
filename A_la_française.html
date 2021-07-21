@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh My Food !</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header+footer.css">
-    <link rel="stylesheet" href="menu-style.css">
+    <!--<link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="css/header+footer.css">
+    <link rel="stylesheet" href="css/menu-style.css">
+    <link rel="stylesheet" href="css/animation.css">
     <script src="https://kit.fontawesome.com/bcab95efac.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,9 +22,16 @@
 
     <figure class="menu-figure">
         <img class="menu-img" src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-        alt="A la française">
+        alt="La palette du goût">
         <figcaption class="menu-caption">A la française
-            <i class="far fa-heart __like-icon"></i>
+
+            
+            <button class="__like-button">
+                <i class="far fa-heart __like-icon --like1"></i>
+
+                <i class="far fa-heart __like-icon --like2"></i>
+            </button>
+            
         </figcaption>
     </figure>
 
@@ -31,7 +39,7 @@
         <h3 class="menu-header">ENTRÉES</h3>
 
 
-        <article id="item-1" class="test-item">
+        <article id ="item-1"class="test-item">
             <div class="header-sec">
             <h4 class="test-name">Tartare de poulpe acidulé</h4>
             <span class="test-detail">Aux zests d'orange</span>
@@ -40,10 +48,12 @@
             <div class="test-checkbox"><i class="far fa-check-circle checkbox__icon"></i></div>
         </article>
 
-        <article id="item-2" class="test-item">
+        
+
+        <article id ="item-2"class="test-item">
             <div class="header-sec">
             <h4 class="test-name">Velouté de légumes d'antan</h4>
-            <span class="test-detail">Carotte, panais, topinambourg</span>
+            <span class="test-detail">Carotte, panais, topinambour</span>
             </div>
             <div class="test-price">35€</div>
             <div class="test-checkbox"><i class="far fa-check-circle checkbox__icon"></i></div>
@@ -64,7 +74,7 @@
         <article id="item-4"  class="test-item">
             <div class="header-sec">
             <h4 class="test-name">Coquilles Saint-Jacques</h4>
-            <span class="test-detail">Accompagnées d'une purée de panais</span>
+            <span class="test-detail">Accompagné d'une purée de panais</span>
             </div>
             <div class="test-price">40€</div>
             <div class="test-checkbox"><i class="far fa-check-circle checkbox__icon"></i></div>
@@ -72,8 +82,8 @@
 
         <article id="item-5" class="test-item">
             <div class="header-sec">
-            <h4 class="test-name">Magret de Canard</h4>
-            <span class="test-detail">Et parmentier de pomme de terres</span>
+            <h4 class="test-name">Magret de canard</h4>
+            <span class="test-detail">Et parmentier de pommes de terres</span>
             </div>
             <div class="test-price">35€</div>
             <div class="test-checkbox"><i class="far fa-check-circle checkbox__icon"></i></div>
@@ -82,7 +92,7 @@
         <article id="item-6" class="test-item">
             <div class="header-sec">
             <h4 class="test-name">Pigeonneau d'Ille-et-Vilaine</h4>
-            <span class="test-detail">Sur son lit de de gnocchis aux légumes</span>
+            <span class="test-detail">Sur son lit de gnocchis aux légumes</span>
             </div>
             <div class="test-price">44€</div>
             <div class="test-checkbox"><i class="far fa-check-circle checkbox__icon"></i></div>
@@ -93,31 +103,33 @@
         <h3 class="menu-header">DESSERTS</h3>
         <article id="item-7" class="test-item">
             <div class="header-sec">
-            <h4 class="test-name">Pétales de violette glacés</h4>
+            <h4 class="test-name">Pétales de violettes glacés</h4>
             <span class="test-detail">Et purée de noisettes</span>
             </div>
             <div class="test-price">18€</div>
             <div class="test-checkbox"><i class="far fa-check-circle checkbox__icon"></i></div>
         </article>
+
         <article id="item-8" class="test-item">
             <div class="header-sec">
             <h4 class="test-name">Fondant au chocolat</h4>
-            <span class="test-detail">Revisté</span>
+            <span class="test-detail">Revisité</span>
             </div>
             <div class="test-price">22€</div>
             <div class="test-checkbox"><i class="far fa-check-circle checkbox__icon"></i></div>
         </article>
+
         <article id="item-9" class="test-item">
             <div class="header-sec">
             <h4 class="test-name">Millefeuille croustillant</h4>
-            <span class="test-detail">Myrtilles et pâte d'amande</span>
+            <span class="test-detail">Myrtilles et pâtes d'amande</span>
             </div>
             <div class="test-price">23€</div>
             <div class="test-checkbox"><i class="far fa-check-circle checkbox__icon"></i></div>
         </article>
     </section>
     
-    <button class="order-button">Commander</button>
+    <button class="order-button --button">Commander</button>
 
     <footer>
         <h3 class="logo-footer">ohmyfood</h3>

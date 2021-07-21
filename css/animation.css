@@ -1,0 +1,148 @@
+/*.__like-button{
+    height: 2.3em;
+    width: 2.3em;
+    margin-right: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+    &:hover .--like2{
+        visibility: visible;
+        animation: like-test 400ms forwards;
+    }
+
+    &:hover .--like1{
+        animation: like-test 385ms 15ms forwards   ;
+
+    }
+
+    .__like-icon{
+        position: absolute;
+    }
+
+    .--like1{
+        font-size: 20px;
+    }
+
+    .--like2{
+        font-size: 13px;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes like-test {
+    0% {
+      font-weight: bold;
+      background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+   }
+
+   25%{
+       opacity: .6;
+   }
+      100% {
+        font-weight: bold;
+        background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 1;
+
+      }
+    }
+    */
+/*
+@mixin like-animation{
+    font-weight: 900;      
+    background:-moz-linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
+    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
+    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    opacity: 1;
+
+}*/
+/*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
+@keyframes like-test {
+  0% {
+    font-weight: bold;
+    background: #9356dc;
+    background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    font-size: 18px;
+    visibility: inherit;
+  }
+  100% {
+    font-weight: bold;
+    background: #9356dc;
+    background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    font-size: 20px;
+    transform: scale(1.1);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes like-2-test {
+  0% {
+    visibility: visible;
+    opacity: 0.4;
+    font-weight: bold;
+    background: #9356dc;
+    background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    opacity: 0.8;
+    font-size: 15px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 19px;
+    font-weight: bold;
+    background: #9356dc;
+    background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.__like-button:hover .--like2 {
+  visibility: visible;
+  animation: like-2-test 100ms forwards;
+}
+.__like-button:hover .--like1 {
+  animation: like-test 75ms 225ms forwards;
+  visibility: hidden;
+}
+
+.--button:hover {
+  background: #9356dc;
+  background: linear-gradient(354deg, rgba(147, 86, 220, 0.8270131658) 13%, #ff79da 100%);
+  -webkit-box-shadow: 3px 10px 20px 7px rgba(0, 0, 0, 0.34);
+  -webkit-box-shadow: 3px 10px 20px 1px rgba(0, 0, 0, 0.34);
+  box-shadow: 3px 10px 20px 1px rgba(0, 0, 0, 0.34);
+}
+
+/*# sourceMappingURL=animation.css.map */

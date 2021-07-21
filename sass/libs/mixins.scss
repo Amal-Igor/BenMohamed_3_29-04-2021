@@ -38,7 +38,7 @@
 
      
 }
-
+/*
 @mixin like-animation{
     font-weight: 900;      
     background:-moz-linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
@@ -50,7 +50,7 @@
     -webkit-text-fill-color:transparent;
     opacity: 1;
     
-}
+}*/
 
 @mixin order-button{
     border-radius: 25px;
@@ -72,4 +72,42 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@mixin like-animation {
+0% {
+    font-weight: bold;
+    background: rgb(147,86,220);
+    background: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    font-size: 18px;
+    visibility: inherit;
+ }
+
+
+    100% {
+      font-weight: bold;
+      background: rgb(147,86,220);
+      background: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 1;
+      font-size:20px;
+        transform: scale(1.1)
+    }
+  }
+
+@mixin like-1{animation: like-test 950ms 100ms forwards;}
+
+/*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
+
+
+
+@mixin card-animation-mobile{
+    0% { opacity: 0;  
+    transform: translateY(50%);} 
+    100% { opacity: 1; 
+    transform: translateY(0%);} 
 }

@@ -1,5 +1,18 @@
 @charset "UTF-8";
+/*
+@mixin like-animation{
+    font-weight: 900;      
+    background:-moz-linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
+    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
+    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    opacity: 1;
 
+}*/
+/*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
 @font-face {
   font-family: "shrikhand";
   src: url(font/Shrikand/Shrikhand-Regular.ttf);
@@ -229,10 +242,53 @@ li:active::after, li:hover::after {
 .restaurant .__like-icon {
   font-family: "Font Awesome 5 Free";
   margin-left: auto;
-  margin-top: -34px;
   font-size: 22px;
   font-weight: 100;
-  margin-right: 34px;
+}
+.restaurant .__like-button {
+  height: 2.3em;
+  width: 2.3em;
+  margin-right: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  left: 86%;
+  bottom: 46%;
+}
+.restaurant .__like-button .__like-icon {
+  position: absolute;
+}
+.restaurant .__like-button .--like1 {
+  font-size: 20px;
+}
+.restaurant .__like-button .--like2 {
+  font-size: 13px;
+  visibility: hidden;
+}
+@keyframes like-test {
+  0% {
+    font-weight: bold;
+    background: #9356dc;
+    background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    font-size: 18px;
+    visibility: inherit;
+  }
+  100% {
+    font-weight: bold;
+    background: #9356dc;
+    background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    font-size: 20px;
+    transform: scale(1.1);
+  }
 }
 .restaurant .rest-name {
   display: flex;

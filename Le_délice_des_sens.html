@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh My Food !</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header+footer.css">
-    <link rel="stylesheet" href="menu-style.css">
+    <!--<link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="css/header+footer.css">
+    <link rel="stylesheet" href="css/menu-style.css">
     <script src="https://kit.fontawesome.com/bcab95efac.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,9 +21,16 @@
 
     <figure class="menu-figure">
         <img class="menu-img" src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-        alt="Le délice des sens">
+        alt="La palette du goût">
         <figcaption class="menu-caption">Le délice des sens
-            <i class="far fa-heart __like-icon"></i>
+
+            
+            <button class="__like-button">
+                <i class="far fa-heart __like-icon --like1"></i>
+
+                <i class="far fa-heart __like-icon --like2"></i>
+            </button>
+            
         </figcaption>
     </figure>
 
@@ -31,7 +38,7 @@
         <h3 class="menu-header">ENTRÉES</h3>
 
 
-        <article id="item-1" class="test-item">
+        <article id ="item-1"class="test-item">
             <div class="header-sec">
             <h4 class="test-name">Tartares de thon</h4>
             <span class="test-detail">Assaisonné au yuzu</span>
@@ -40,7 +47,9 @@
             <div class="test-checkbox"><i class="far fa-check-circle checkbox__icon"></i></div>
         </article>
 
-        <article id="item-2" class="test-item">
+        
+
+        <article id ="item-2"class="test-item">
             <div class="header-sec">
             <h4 class="test-name">Bouchée de homard croustillant</h4>
             <span class="test-detail">Et sa farandole de petits légumes</span>
@@ -51,8 +60,8 @@
 
         <article id ="item-3"class="test-item">
             <div class="header-sec">
-            <h4 class="test-name">Velouté de cèpes</h4>
-            <span class="test-detail">Aux truffes</span>
+            <h4 class="test-name">Oeuf au plat</h4>
+            <span class="test-detail">Assaisoné à la truffe sur lit de poireaux</span>
             </div>
             <div class="test-price">20€</div>
             <div class="test-checkbox"><i class="far fa-check-circle checkbox__icon"></i></div>
@@ -102,7 +111,7 @@
         <article id="item-8" class="test-item">
             <div class="header-sec">
             <h4 class="test-name">Crème brulée</h4>
-            <span class="test-detail">Revistée</span>
+            <span class="test-detail">Revisitée</span>
             </div>
             <div class="test-price">22€</div>
             <div class="test-checkbox"><i class="far fa-check-circle checkbox__icon"></i></div>

@@ -241,11 +241,40 @@ body{
         .__like-icon{
             font-family: "Font Awesome 5 Free";
             margin-left: auto;
-            margin-top: -34px;
             font-size: 22px;
             font-weight: 100;
-            margin-right: 34px;
         }
+
+        .__like-button{
+            height: 2.3em;
+            width: 2.3em;
+            margin-right: 24px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            left: 86%;
+            bottom: 46%;
+        
+        
+            .__like-icon{
+                position: absolute;
+            }
+        
+            .--like1{
+                font-size: 20px;
+            }
+        
+            .--like2{
+                font-size: 13px;
+                visibility: hidden;
+            }
+        }
+        
+        
+        @keyframes like-test { @include like-animation}
 
         .rest-name{
             display: flex;
