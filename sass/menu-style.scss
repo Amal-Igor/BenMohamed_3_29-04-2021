@@ -66,11 +66,6 @@ body{
         border-radius: 32px 32px 0 0
     }
 
-    .__like-icon{
-        align-self: center;
-        padding-right: 30px;
-    }
-
 }
 
 .menu-section{
@@ -166,12 +161,110 @@ body{
     align-items: center;
     margin: 2.75em auto; 
 }
-@keyframes fade { 0% { opacity: 0; } 100% { opacity: 1; } }
 
-@for $i from 1 through 10 {
-    .menu-section article:nth-child(#{$i}n) {
-        animation-delay: #{$i * 0.3}s;
+.__like-button{
+    height: 2.3em;
+    width: 2.3em;
+    margin-right: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+    &:hover .--like2{
+        visibility: visible;
+        animation: like-test 300ms forwards;
     }
+
+    &:hover .--like1{
+        animation: like-test 300ms 10ms forwards   ;
+
+    }
+
+    .__like-icon{
+        position: absolute;
+    }
+
+    .--like1{
+        font-size: 20px;
+    }
+
+    .--like2{
+        font-size: 13px;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes like-test {
+    0% {
+      font-weight: bold;
+      background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+   }
+
+   25%{
+       opacity: .4;
+   }
+      100% {
+        font-weight: bold;
+        background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 1;
+   
+      }
+    }
+
+@keyframes fade {   0% { opacity: 0;  
+                        transform: translateY(50%);} 
+                    100% { opacity: 1; 
+                        transform: translateY(0%); }}
+
+#item-1{
+    animation-delay: 0ms;
+}
+
+#item-2{
+    animation-delay: 400ms;
+}
+
+#item-3{
+    animation-delay: 800ms;
+}
+
+#item-4{
+    animation-delay: 1200ms;
+}
+
+#item-5{
+    animation-delay: 1600ms;
+}
+
+#item-6{
+    animation-delay: 2000ms;
+}
+
+#item-7{
+    animation-delay: 2400ms;
+}
+
+#item-8{
+    animation-delay: 2800ms;
+}
+
+#item-9{
+    animation-delay: 3200ms;
+}
+
+#item-10{
+    animation-delay: 3600ms;
 }
 
 
@@ -183,14 +276,15 @@ body{
     align-items: flex-end;
     justify-content: space-between;
     flex-wrap: nowrap;
-    margin: 1em 0;
-    height: 4em;
-    width: 100%;
+    margin: 7px 6px;
+    height: 4.95em;
+    width: 96%;
     overflow: hidden;
     border-radius: 12px;
-    animation: fade 2.2s forwards;
-    
+    animation: fade 850ms forwards;
     opacity: 0;
+    -webkit-box-shadow: 1px 10px 20px -7px rgba(0,0,0,0.3); 
+    box-shadow: 1px 10px 20px -7px rgba(0,0,0,0.3);
 
     .test-name{
     display: inherit;
@@ -203,13 +297,17 @@ body{
     text-align: right;
     font-weight: bold;
     margin-right: .75em;
-    
     }
 
     .header-sec{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+
     }
 
     .header-sec, .test-price{
@@ -230,7 +328,7 @@ body{
     }
 
     &:hover .test-checkbox{
-    width: 5em;
+    width: 20%;
     padding: inherit;
     height: 100%;
     }
@@ -246,7 +344,8 @@ body{
         position: relative;
         font-weight: 900;
         color: white;
-        font-size: 21px;
-        
+        font-size: 21px;  
     }
 }
+
+
