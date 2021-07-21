@@ -1,75 +1,62 @@
-.__like-button{
-    height: 2.3em;
-    width: 2.3em;
-    margin-right: 24px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: none;
 
-    &:hover .--like2{
-        visibility: visible;
-        animation: like-test 400ms forwards;
-    }
+@import "libs/responsive.scss";
+@import "libs/mixins.scss";
 
-    &:hover .--like1{
-        animation: like-test 385ms 15ms forwards   ;
-
-    }
-
-    .__like-icon{
-        position: absolute;
-    }
-
-    .--like1{
-        font-size: 20px;
-    }
-
-    .--like2{
-        font-size: 13px;
-        visibility: hidden;
-    }
-}
-
-
-@keyframes like-test {
-    0% {
-      font-weight: bold;
-      background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-      background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      opacity: 0;
-   }
-
-   25%{
-       opacity: .6;
-   }
-      100% {
-        font-weight: bold;
-        background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-        background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 1;
-   
-      }
-    }
-    
-
-    @import "libs/responsive.scss";
-    @import "libs/mixins.scss";
-
-@keyframes like-test {@include like-animation; }
-
-@keyframes fade {  0% { opacity: 0;  
+ /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  
+@keyframes fade {  
+    0% { opacity: 0;  
     transform: translateY(50%);} 
-    100% { opacity: 1; 
+ 100% { opacity: 1; 
     transform: translateY(0%);}}
 
-    
+.test-item{
+animation: fade 850ms forwards;}
+
+#item-1{
+    animation-delay: 0ms;
+}
+
+#item-2{
+    animation-delay: 400ms;
+}
+
+#item-3{
+    animation-delay: 800ms;
+}
+
+#item-4{
+    animation-delay: 1200ms;
+}
+
+#item-5{
+    animation-delay: 1600ms;
+}
+
+#item-6{
+    animation-delay: 2000ms;
+}
+
+#item-7{
+    animation-delay: 2400ms;
+}
+
+#item-8{
+    animation-delay: 2800ms;
+}
+
+#item-9{
+    animation-delay: 3200ms;
+}
+
+#item-10{
+    animation-delay: 3600ms;
+}
+
+ /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/ 
+
+
+
+ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/
 @keyframes like-2-test{
     0%{
     visibility: visible;
@@ -96,26 +83,49 @@
     -webkit-text-fill-color: transparent;}
         
     }
-
+@keyframes like-test {
+        0% {
+          font-weight: bold;
+          background: #9356dc;
+          background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          opacity: 0;
+          font-size: 18px;
+          visibility: inherit;
+        }
+        100% {
+          font-weight: bold;
+          background: #9356dc;
+          background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          opacity: 1;
+          font-size: 20px;
+          transform: scale(1.1);
+        }}
 .__like-button{
     &:hover .--like2{
         visibility: visible;
         animation: like-2-test 100ms forwards;
     }
 
-
-  
     &:hover .--like1{
         animation: like-test 75ms 225ms forwards;
         visibility: hidden;
     }
 }
 
-.--button:hover{
+ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/
+
+ /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/ 
+ .--button:hover{
     background: rgb(147,86,220);
     background: linear-gradient(354deg, rgba(147,86,220,0.8270131657632549) 13%, rgba(255,121,218,1) 100%);
     -webkit-box-shadow: 3px 10px 20px 7px rgba(0,0,0,0.34); 
     -webkit-box-shadow: 3px 10px 20px 1px rgba(0,0,0,0.34); 
     box-shadow: 3px 10px 20px 1px rgba(0,0,0,0.34);
     
-    }
+}
+
+ /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/ 

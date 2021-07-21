@@ -38,19 +38,7 @@
 
      
 }
-/*
-@mixin like-animation{
-    font-weight: 900;      
-    background:-moz-linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
-    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
-    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color:transparent;
-    opacity: 1;
-    
-}*/
+
 
 @mixin order-button{
     border-radius: 25px;

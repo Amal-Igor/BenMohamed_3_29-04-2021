@@ -1,16 +1,3 @@
-/*
-@mixin like-animation{
-    font-weight: 900;      
-    background:-moz-linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
-    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
-    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color:transparent;
-    opacity: 1;
-
-}*/
 /*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
 @font-face {
   font-family: "shrikhand";
@@ -179,46 +166,6 @@ body {
 .__like-button .--like2 {
   font-size: 13px;
   visibility: hidden;
-}
-
-#item-1 {
-  animation-delay: 0ms;
-}
-
-#item-2 {
-  animation-delay: 400ms;
-}
-
-#item-3 {
-  animation-delay: 800ms;
-}
-
-#item-4 {
-  animation-delay: 1200ms;
-}
-
-#item-5 {
-  animation-delay: 1600ms;
-}
-
-#item-6 {
-  animation-delay: 2000ms;
-}
-
-#item-7 {
-  animation-delay: 2400ms;
-}
-
-#item-8 {
-  animation-delay: 2800ms;
-}
-
-#item-9 {
-  animation-delay: 3200ms;
-}
-
-#item-10 {
-  animation-delay: 3600ms;
 }
 
 .test-item {
