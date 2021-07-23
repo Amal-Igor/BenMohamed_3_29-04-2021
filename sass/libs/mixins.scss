@@ -5,10 +5,10 @@
 }
 
 @mixin figure-reset{
-    margin-block-start: inherit;
-    margin-block-end: inherit;
-    margin-inline-start: inherit;
-    margin-inline-end: inherit;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 @mixin new-restaurant{

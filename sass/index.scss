@@ -1,32 +1,12 @@
 @import "libs/responsive.scss";
 @import "libs/mixins.scss";
 
-@font-face {
-    font-family: "shrikhand";
-    src: url(font/Shrikand/Shrikhand-Regular.ttf);
-}
-
-@font-face {
-    font-family: "roboto";
-    src: url(font/Roboto/Roboto-Regular.ttf);
-}
-
-@font-face {
-    font-family: "roboto-bold";
-    src: url(font/Roboto/Roboto-Bold.ttf);
-}
-
-@font-face{
-    font-family:"roboto-thin";
-    src: url(font/Roboto/Roboto-Thin.ttf);
-}
-
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
 
 $grey: rgb(234, 234, 234);
-$gradient: linear-gradient($secondary, $primary);
+
 
 
 
@@ -55,6 +35,13 @@ body{
         color: black;
         opacity: .75;
         word-spacing: 10px;
+    }
+
+    .searchbar-placeholder::after{
+        content:"yo";
+        font-size: 18px;
+        color: black;
+        position:absolute;
     }
 
 
@@ -110,10 +97,8 @@ body{
     }
 
     ol{
-        padding-inline-start: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     li::before {
@@ -190,7 +175,7 @@ body{
         color: $primary;
     }
 
-    .restaurant{
+.restaurant{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -222,7 +207,7 @@ body{
         }
 
         figure{
-            @include figure-reset;
+            margin:0;
             height: 97%;
         }
 
@@ -233,9 +218,6 @@ body{
                 border-radius: 16px 16px 0 0;
         }
         
-        .--new-restaurant::before{
-            @include new-restaurant;
-        }
 
        
         .__like-icon{
@@ -261,20 +243,10 @@ body{
         
             .__like-icon{
                 position: absolute;
-            }
-        
-            .--like1{
-                font-size: 20px;
-            }
-        
-            .--like2{
-                font-size: 13px;
-                visibility: hidden;
+                bottom: 55px;
+                right: 27px;
             }
         }
-        
-        
-        @keyframes like-test { @include like-animation}
 
         .rest-name{
             display: flex;
@@ -293,3 +265,17 @@ body{
                 font-family: 'roboto';
         }
     }
+
+figure .--new-restaurant::before{
+    content: "Nouveau";
+    position: absolute;
+    color: darken($tertiary, 42%);
+    top: 14px;
+    right: 20px;
+    background-color: $tertiary;
+    width: 72px;
+    text-align: center;
+    font-family: "roboto";
+    font-weight: 600;
+    font-size: 13px;
+    height: 18px;}

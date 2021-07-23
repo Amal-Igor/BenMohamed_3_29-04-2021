@@ -1,34 +1,5 @@
 @charset "UTF-8";
-/*
-@mixin like-animation{
-    font-weight: 900;      
-    background:-moz-linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
-    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%); 
-    background: linear-gradient(189deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 62%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color:transparent;
-    opacity: 1;
-
-}*/
 /*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
-@font-face {
-  font-family: "shrikhand";
-  src: url(font/Shrikand/Shrikhand-Regular.ttf);
-}
-@font-face {
-  font-family: "roboto";
-  src: url(font/Roboto/Roboto-Regular.ttf);
-}
-@font-face {
-  font-family: "roboto-bold";
-  src: url(font/Roboto/Roboto-Bold.ttf);
-}
-@font-face {
-  font-family: "roboto-thin";
-  src: url(font/Roboto/Roboto-Thin.ttf);
-}
 * {
   box-sizing: border-box;
 }
@@ -54,6 +25,12 @@ body {
   color: black;
   opacity: 0.75;
   word-spacing: 10px;
+}
+.searchbar .searchbar-placeholder::after {
+  content: "yo";
+  font-size: 18px;
+  color: black;
+  position: absolute;
 }
 
 .browsing {
@@ -102,10 +79,8 @@ body {
   font-weight: bold;
 }
 .operation ol {
-  padding-inline-start: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .operation li::before {
   content: counter(li);
@@ -209,14 +184,7 @@ li:active::after, li:hover::after {
   position: relative;
 }
 .restaurant figure {
-  display: inherit;
-  margin-block-start: inherit;
-  margin-block-end: inherit;
-  margin-inline-start: inherit;
-  margin-inline-end: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0;
   height: 97%;
 }
 .restaurant img {
@@ -224,20 +192,6 @@ li:active::after, li:hover::after {
   height: 74%;
   width: 100%;
   border-radius: 16px 16px 0 0;
-}
-.restaurant .--new-restaurant::before {
-  content: "Nouveau";
-  position: absolute;
-  color: #24806a;
-  top: 14px;
-  right: 20px;
-  background-color: #99E2D0;
-  width: 72px;
-  text-align: center;
-  font-family: "roboto";
-  font-weight: 600;
-  font-size: 13px;
-  height: 18px;
 }
 .restaurant .__like-icon {
   font-family: "Font Awesome 5 Free";
@@ -260,37 +214,9 @@ li:active::after, li:hover::after {
 }
 .restaurant .__like-button .__like-icon {
   position: absolute;
+  bottom: 55px;
+  right: 27px;
 }
-.restaurant .__like-button .--like1 {
-  font-size: 20px;
-}
-.restaurant .__like-button .--like2 {
-  font-size: 13px;
-  visibility: hidden;
-}
-/*
-@keyframes like-test {
-  0% {
-    font-weight: bold;
-    background: #9356dc;
-    background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-    font-size: 18px;
-    visibility: inherit;
-  }
-  100% {
-    font-weight: bold;
-    background: #9356dc;
-    background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
-    font-size: 20px;
-    transform: scale(1.1);
-  }
-}*/
 .restaurant .rest-name {
   display: flex;
   flex-direction: column;
@@ -303,6 +229,21 @@ li:active::after, li:hover::after {
 }
 .restaurant .rest-location {
   font-family: "roboto";
+}
+
+figure .--new-restaurant::before {
+  content: "Nouveau";
+  position: absolute;
+  color: #24806a;
+  top: 14px;
+  right: 20px;
+  background-color: #99E2D0;
+  width: 72px;
+  text-align: center;
+  font-family: "roboto";
+  font-weight: 600;
+  font-size: 13px;
+  height: 18px;
 }
 
 /*# sourceMappingURL=index.css.map */

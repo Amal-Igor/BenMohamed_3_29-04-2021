@@ -1,13 +1,11 @@
 @charset "UTF-8";
-/** FONTS **/
-/** FONTS **/
-/** FONTS **/
-/** FONTS **/
-/** FONTS **/
+/* FONTS */
+/*logo*/
 @font-face {
   font-family: "shrikhand";
   src: url(font/Shrikand/Shrikhand-Regular.ttf);
 }
+/*body*/
 @font-face {
   font-family: "roboto";
   src: url(font/Roboto/Roboto-Regular.ttf);
@@ -20,20 +18,8 @@
   font-family: "roboto-thin";
   src: url(font/Roboto/Roboto-Thin.ttf);
 }
-/** FONTS **/
-/** FONTS **/
-/** FONTS **/
-/** FONTS **/
-/** FONTS **/
-/** FONTS **/
-/** VARIABLES **/
-/** VARIABLES **/
-/** VARIABLES **/
-/** VARIABLES **/
-/** VARIABLES **/
-/** VARIABLES **/
-/** VARIABLES **/
-/** VARIABLES **/
+/*background gradient*/
+/*STYLE*/
 header {
   width: 100%;
   display: flex;

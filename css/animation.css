@@ -1,9 +1,6 @@
 /*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
-/** ANIMATIONS MENUES**/
-/** ANIMATIONS MENUES**/
-/** ANIMATIONS MENUES**/
-/** ANIMATIONS MENUES**/
-/** ANIMATIONS MENUES**/
+/* VARIABLES */
+/* ANIMATIONS MENUS */
 @keyframes fade {
   0% {
     opacity: 0;
@@ -58,21 +55,13 @@
   animation-delay: 3600ms;
 }
 
-/** ANIMATIONS MENUES**/
-/** ANIMATIONS MENUES**/
-/** ANIMATIONS MENUES**/
-/** ANIMATIONS MENUES**/
-/** ANIMATIONS MENUES**/
-/** ANIMATIONS DES COEURS **/
-/** ANIMATIONS DES COEURS **/
-/** ANIMATIONS DES COEURS **/
 /** ANIMATIONS DES COEURS **/
 @keyframes like-2-test {
   0% {
     visibility: visible;
     opacity: 0.4;
     font-weight: bold;
-    background: #9356dc;
+    background: #9356DC;
     background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -85,7 +74,7 @@
     opacity: 1;
     font-size: 19px;
     font-weight: bold;
-    background: #9356dc;
+    background: #9356DC;
     background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -94,7 +83,7 @@
 @keyframes like-test {
   0% {
     font-weight: bold;
-    background: #9356dc;
+    background: #9356DC;
     background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -102,15 +91,17 @@
     font-size: 18px;
     visibility: inherit;
   }
+  90% {
+    transform: scale(1.1);
+    transition: transform 150ms;
+  }
   100% {
     font-weight: bold;
-    background: #9356dc;
-    background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 1;
     font-size: 20px;
-    transform: scale(1.1);
+    transform: scale(1);
   }
 }
 .__like-button:hover .--like2 {
@@ -122,26 +113,22 @@
   visibility: hidden;
 }
 
-/** ANIMATIONS DES COEURS **/
-/** ANIMATIONS DES COEURS **/
-/** ANIMATIONS DES COEURS **/
-/** ANIMATIONS DES COEURS **/
-/** ANIMATIONS DES COEURS **/
-/** ANIMATION BUTTON **/
-/** ANIMATION BUTTON **/
-/** ANIMATION BUTTON **/
-/** ANIMATION BUTTON **/
+.--like1 {
+  font-size: 20px;
+}
+
+.--like2 {
+  font-size: 13px;
+  visibility: hidden;
+}
+
+/* ANIMATIONS BOUTONS */
 .--button:hover {
-  background: #9356dc;
   background: linear-gradient(354deg, rgba(147, 86, 220, 0.8270131658) 13%, #ff79da 100%);
   -webkit-box-shadow: 3px 10px 20px 7px rgba(0, 0, 0, 0.34);
   -webkit-box-shadow: 3px 10px 20px 1px rgba(0, 0, 0, 0.34);
   box-shadow: 3px 10px 20px 1px rgba(0, 0, 0, 0.34);
+  transition: box-shadow 200ms;
 }
-
-/** ANIMATION BUTTON **/
-/** ANIMATION BUTTON **/
-/** ANIMATION BUTTON **/
-/** ANIMATION BUTTON **/
 
 /*# sourceMappingURL=animation.css.map */

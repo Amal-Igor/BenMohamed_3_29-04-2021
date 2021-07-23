@@ -1,8 +1,15 @@
 
 @import "libs/responsive.scss";
 @import "libs/mixins.scss";
+/* VARIABLES */
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
 
- /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  
+$like-gradient: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
+
+
+ /* ANIMATIONS MENUS */
 @keyframes fade {  
     0% { opacity: 0;  
     transform: translateY(50%);} 
@@ -52,18 +59,17 @@ animation: fade 850ms forwards;}
     animation-delay: 3600ms;
 }
 
- /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/  /** ANIMATIONS MENUES**/ 
 
 
 
- /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/
+ /** ANIMATIONS DES COEURS **/ 
 @keyframes like-2-test{
     0%{
     visibility: visible;
     opacity: 0.4;
     font-weight: bold;
-    background: rgb(147,86,220);
-    background: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
+    background: $primary;
+    background: $like-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
         }
@@ -77,8 +83,8 @@ animation: fade 850ms forwards;}
     opacity: 1;
     font-size:19px;
     font-weight: bold;
-    background: rgb(147,86,220);
-    background: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218,1) 100%);
+    background: $primary;
+    background: $like-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
         
@@ -86,46 +92,57 @@ animation: fade 850ms forwards;}
 @keyframes like-test {
         0% {
           font-weight: bold;
-          background: #9356dc;
-          background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
+          background: $primary;
+          background: $like-gradient;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           opacity: 0;
           font-size: 18px;
           visibility: inherit;
         }
+
+        90%{
+            transform: scale(1.1);
+            transition: transform 150ms;
+            
+        }
         100% {
           font-weight: bold;
-          background: #9356dc;
-          background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           opacity: 1;
           font-size: 20px;
-          transform: scale(1.1);
+          transform: scale(1);
         }}
-.__like-button{
-    &:hover .--like2{
+        
+.__like-button:hover{
+    .--like2{
         visibility: visible;
         animation: like-2-test 100ms forwards;
     }
 
-    &:hover .--like1{
+    .--like1{
         animation: like-test 75ms 225ms forwards;
         visibility: hidden;
     }
 }
 
- /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/ /** ANIMATIONS DES COEURS **/
+.--like1{
+    font-size: 20px;
+}
 
- /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/ 
+.--like2{
+    font-size: 13px;
+    visibility: hidden;
+}
+ 
+
+ /* ANIMATIONS BOUTONS */ 
  .--button:hover{
-    background: rgb(147,86,220);
     background: linear-gradient(354deg, rgba(147,86,220,0.8270131657632549) 13%, rgba(255,121,218,1) 100%);
     -webkit-box-shadow: 3px 10px 20px 7px rgba(0,0,0,0.34); 
     -webkit-box-shadow: 3px 10px 20px 1px rgba(0,0,0,0.34); 
     box-shadow: 3px 10px 20px 1px rgba(0,0,0,0.34);
-    
+    transition: box-shadow 200ms;
 }
 
- /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/  /** ANIMATION BUTTON **/ 
