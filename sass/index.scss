@@ -12,6 +12,7 @@ $grey: rgb(234, 234, 234);
 
 *{
     box-sizing: border-box;
+    max-width: 1500px;
 }
 
 body{
@@ -55,6 +56,7 @@ body{
     height:18em;
     margin-bottom: 5rem;
     background-color: lighten($grey, 25%);
+    @include browsing(medium);
 
     >*{
         margin-bottom: auto;
@@ -92,6 +94,7 @@ body{
 }
 
 .operation{
+    @include operation(medium);
     h2{
         @include subsection-head;
     }
@@ -99,6 +102,8 @@ body{
     ol{
         display: flex;
         flex-direction: column;
+        @include ol(large);
+        @include ol(medium);
     }
 
     li::before {
@@ -165,6 +170,9 @@ body{
         background-color: rgb(146 138 138 / 5%);
         width: 86%;
         position: relative;
+
+        @include li(large);
+        @include li(medium);
     }
 
     li:active{
@@ -183,11 +191,13 @@ body{
         height: 89rem;
         background-color: #f2f2f2;
         /*lighten($grey, 25%);*/
+        @include breakpoint-card(medium);
         
         h2{
             @include subsection-head;
             margin-top: 0;
             margin-right: auto;
+            grid-area:header;
         }
         
         a{
@@ -204,18 +214,28 @@ body{
             margin-bottom: 1em;
             border-radius: 16px;
             position: relative;
+            overflow: hidden;
+            @include --card-justify(medium);
         }
 
+        
+        #card1{grid-area: card1;
+        }
+        #card2{grid-area:card2}
+        #card3{grid-area:card3}
+        #card4{grid-area:card4}
         figure{
             margin:0;
-            height: 97%;
+            height: 100%;
         }
 
         img{
                 object-fit: cover;
                 height: 74%;
                 width: 100%;
+                transition: height 300ms ease-in-out , border-radius 250ms ease-in-out;
                 border-radius: 16px 16px 0 0;
+                @include card-img(large);
         }
         
 
@@ -223,7 +243,6 @@ body{
         .__like-icon{
             font-family: "Font Awesome 5 Free";
             margin-left: auto;
-            font-size: 22px;
             font-weight: 100;
         }
 
@@ -237,14 +256,20 @@ body{
             justify-content: center;
             align-items: center;
             border: none;
-            left: 86%;
-            bottom: 46%;
+            left: 78%;
+            bottom: 42px;
         
         
             .__like-icon{
                 position: absolute;
-                bottom: 55px;
-                right: 27px;
+                bottom: 8px;
+                right: 8px;
+                @include like-button(large);
+
+                .--like2{
+                    position: absolute;
+                    left: 15px;
+                }
             }
         }
 

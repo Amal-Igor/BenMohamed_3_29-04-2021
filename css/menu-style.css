@@ -1,3 +1,14 @@
+/*HEADER+FOOTER*/
+/*header*/
+/*INDEX*/
+/*searchbear*/
+/*card-restaurant*/
+/*like-button*/
+/*operations*/
+/*browsing*/
+/*MENU STYLE*/
+/*body*/
+/*@mixin like-1{animation: like-test 950ms 100ms forwards;}*/
 /*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
 @font-face {
   font-family: "shrikhand";
@@ -19,8 +30,23 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   margin: inherit;
+}
+@media (min-width: 650px) {
+  body {
+    grid-template-areas: "header header header" "figure figure figure" "starter dish dessert" "button button button" "footer footer footer";
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+header a:visited {
+  color: black;
 }
 
 .menu-figure {
@@ -51,11 +77,44 @@ body {
   border-radius: 32px 32px 0 0;
 }
 
+header {
+  grid-area: header;
+}
+
+figure {
+  grid-area: figure;
+}
+
+#starter {
+  grid-area: starter;
+}
+
+#dish {
+  grid-area: dish;
+}
+
+#dessert {
+  grid-area: dessert;
+}
+
+button {
+  grid-area: button;
+}
+
+footer {
+  grid-area: footer;
+}
+
 .menu-section {
   position: relative;
   margin-bottom: 2em;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 650px) {
+  .menu-section {
+    width: 33vw;
+  }
 }
 .menu-section .menu-header {
   font-family: "roboto-thin";

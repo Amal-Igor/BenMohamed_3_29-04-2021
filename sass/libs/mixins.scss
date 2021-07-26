@@ -87,7 +87,7 @@
     }
   }
 
-@mixin like-1{animation: like-test 950ms 100ms forwards;}
+/*@mixin like-1{animation: like-test 950ms 100ms forwards;}*/
 
 /*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
 
@@ -99,3 +99,7 @@
     100% { opacity: 1; 
     transform: translateY(0%);} 
 }
+
+
+
+

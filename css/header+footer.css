@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/*HEADER+FOOTER*/
+/*header*/
+/*INDEX*/
+/*searchbear*/
+/*card-restaurant*/
+/*operations*/
+/*browsing*/
 /* FONTS */
 /*logo*/
 @font-face {
@@ -28,6 +35,11 @@ header {
   align-items: center;
   position: relative;
 }
+@media (min-width: 545px) {
+  header {
+    height: 5rem;
+  }
+}
 header .logo {
   text-decoration: none;
   color: black;
@@ -35,6 +47,12 @@ header .logo {
   font-size: 2.15rem;
   text-align: center;
   min-width: max-content;
+}
+@media (min-width: 545px) {
+  header .logo {
+    height: 5rem;
+    font-size: 3.75rem;
+  }
 }
 header .return-anchor {
   position: absolute;
@@ -47,6 +65,27 @@ footer {
   height: 14em;
   background-color: #383838;
   color: white;
+}
+@media (min-width: 545px) {
+  footer {
+    display: grid;
+    margin: 0;
+    height: 6em;
+    align-content: center;
+    grid-template-areas: "header it1 it3" "header it2 it4";
+  }
+}
+footer #prop {
+  grid-area: it1;
+}
+footer #partner {
+  grid-area: it2;
+}
+footer #mentions {
+  grid-area: it3;
+}
+footer #contact {
+  grid-area: it4;
 }
 footer a {
   text-decoration: none;
@@ -74,6 +113,13 @@ footer .logo-footer {
   padding-left: 23px;
   font-size: 21px;
   font-weight: 200;
+  grid-area: header;
+}
+@media (min-width: 545px) {
+  footer .logo-footer {
+    font-size: 2.4rem;
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=header+footer.css.map */

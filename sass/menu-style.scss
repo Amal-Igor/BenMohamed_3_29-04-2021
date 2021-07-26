@@ -32,11 +32,18 @@ $gradient-button: linear-gradient(354deg, rgba(147,86,220,0.8270131657632549) 13
 *{
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 
 body{
     margin:inherit;
+    @include restaurant-menu(medium);
 }
 
+header{
+    a:visited{color:black;}
+}
 .menu-figure{
     margin:0;
     position: relative;
@@ -68,11 +75,21 @@ body{
 
 }
 
+header{grid-area:header;}
+figure{grid-area: figure;}
+#starter{grid-area: starter;}
+#dish {grid-area: dish;}
+#dessert{grid-area: dessert;}
+button{grid-area: button;}
+footer{grid-area:footer;}
+
 .menu-section{
     position: relative;
     margin-bottom: 2em;
     flex-direction: column;
     align-items: center;
+    @include restaurant-section(medium);
+    
 
     .menu-header{
         font-family: 'roboto-thin';
@@ -254,4 +271,5 @@ body{
         font-size: 21px;  
     }
 }
+
 

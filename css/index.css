@@ -1,7 +1,19 @@
 @charset "UTF-8";
+/*HEADER+FOOTER*/
+/*header*/
+/*INDEX*/
+/*searchbear*/
+/*card-restaurant*/
+/*like-button*/
+/*operations*/
+/*browsing*/
+/*MENU STYLE*/
+/*body*/
+/*@mixin like-1{animation: like-test 950ms 100ms forwards;}*/
 /*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
 * {
   box-sizing: border-box;
+  max-width: 1500px;
 }
 
 body {
@@ -42,6 +54,12 @@ body {
   margin-bottom: 5rem;
   background-color: white;
 }
+@media (min-width: 545px) {
+  .browsing {
+    margin-bottom: 3em;
+    height: 13em;
+  }
+}
 .browsing > * {
   margin-bottom: auto;
 }
@@ -73,6 +91,11 @@ body {
   box-shadow: 1px 6px 9px rgba(88, 84, 84, 0.411);
 }
 
+@media (min-width: 545px) and (max-width: 1500px) {
+  .operation {
+    margin-bottom: 2em;
+  }
+}
 .operation h2 {
   font-family: "roboto";
   font-size: 23px;
@@ -81,6 +104,19 @@ body {
 .operation ol {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 850px) and (max-width: 1440px) {
+  .operation ol {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 545px) {
+  .operation ol {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-inline-start: 1em;
+  }
 }
 .operation li::before {
   content: counter(li);
@@ -144,6 +180,19 @@ li {
   width: 86%;
   position: relative;
 }
+@media (min-width: 1000px) and (max-width: 1500px) {
+  li {
+    margin: 0;
+    width: 23%;
+  }
+}
+@media (min-width: 545px) and (max-width: 1000px) {
+  li {
+    width: 31%;
+    padding-left: 63px;
+    font-size: 14px;
+  }
+}
 
 li:active {
   background-color: rgba(147, 86, 220, 0.2);
@@ -162,12 +211,23 @@ li:active::after, li:hover::after {
   background-color: #f2f2f2;
   /*lighten($grey, 25%);*/
 }
+@media (min-width: 545px) {
+  .restaurant {
+    height: 41rem;
+    background-color: #f2f2f2;
+    grid-template-areas: " header header" "card1 card2" "card3 card4";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2em;
+  }
+}
 .restaurant h2 {
   font-family: "roboto";
   font-size: 23px;
   font-weight: bold;
   margin-top: 0;
   margin-right: auto;
+  grid-area: header;
 }
 .restaurant a {
   text-decoration: none;
@@ -182,21 +242,45 @@ li:active::after, li:hover::after {
   margin-bottom: 1em;
   border-radius: 16px;
   position: relative;
+  overflow: hidden;
+}
+@media (min-width: 545px) {
+  .restaurant .restaurant-card {
+    justify-self: center;
+  }
+}
+.restaurant #card1 {
+  grid-area: card1;
+}
+.restaurant #card2 {
+  grid-area: card2;
+}
+.restaurant #card3 {
+  grid-area: card3;
+}
+.restaurant #card4 {
+  grid-area: card4;
 }
 .restaurant figure {
   margin: 0;
-  height: 97%;
+  height: 100%;
 }
 .restaurant img {
   object-fit: cover;
   height: 74%;
   width: 100%;
+  transition: height 300ms ease-in-out, border-radius 250ms ease-in-out;
   border-radius: 16px 16px 0 0;
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .restaurant img {
+    height: 100%;
+    border-radius: 16px;
+  }
 }
 .restaurant .__like-icon {
   font-family: "Font Awesome 5 Free";
   margin-left: auto;
-  font-size: 22px;
   font-weight: 100;
 }
 .restaurant .__like-button {
@@ -209,13 +293,23 @@ li:active::after, li:hover::after {
   justify-content: center;
   align-items: center;
   border: none;
-  left: 86%;
-  bottom: 46%;
+  left: 78%;
+  bottom: 42px;
 }
 .restaurant .__like-button .__like-icon {
   position: absolute;
-  bottom: 55px;
-  right: 27px;
+  bottom: 8px;
+  right: 8px;
+}
+@media (min-width: 850px) and (max-width: 1500px) {
+  .restaurant .__like-button .__like-icon {
+    bottom: 10px;
+    right: -23px;
+  }
+}
+.restaurant .__like-button .__like-icon .--like2 {
+  position: absolute;
+  left: 15px;
 }
 .restaurant .rest-name {
   display: flex;

@@ -1,1 +1,192 @@
-    
+
+
+$breakpoints: (
+  'small':  (max-width:545px),
+  'medium': (min-width:545px) and (max-width:850px),
+  'large':  (min-width:850px) and (max-width:1440px),
+) !default;
+
+/*HEADER+FOOTER*/
+
+/*header*/
+@mixin header($breakpoints) {
+  @if $breakpoints == medium {
+    @media (min-width: 545px) 
+    { height: 5rem; 
+      }; 
+      }
+ }
+
+
+ @mixin logo($breakpoints) {
+  @if $breakpoints == medium {
+    @media (min-width: 545px) 
+    { height: 5rem;
+      font-size: 3.75rem; 
+      }; 
+      }
+ }
+
+ @mixin logo-footer($breakpoints) {
+  @if $breakpoints == medium {
+    @media (min-width: 545px) 
+    {font-size: 2.4rem;
+      margin:0; 
+      }; 
+      }
+ }
+
+ @mixin footer($breakpoints) {
+  @if $breakpoints == medium {
+    @media (min-width: 545px) 
+    {display: grid;
+      margin:0;
+      height: 6em;
+      align-content: center;
+      grid-template-areas: 'header it1 it3' 'header it2 it4'; 
+      }; 
+      }
+ }
+ 
+ 
+ /*INDEX*/
+
+/*searchbear*/
+@mixin searchbar($breakpoints) {
+  @if $breakpoints == medium {
+    @media (min-width: 545px) 
+    { height: 4rem; 
+      }; 
+      }
+ }
+
+/*card-restaurant*/
+@mixin breakpoint-card($breakpoints) {
+    @if $breakpoints == medium {
+      @media (min-width: 545px) 
+      { height: 41rem;
+        background-color: #f2f2f2;
+        grid-template-areas:' header header'
+                              'card1 card2'
+                              'card3 card4';
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2em;
+            
+        }; 
+        }
+   }
+  @mixin --card-justify($breakpoints){
+    @if $breakpoints == medium{
+      @media (min-width:545px) {
+            justify-self: center;
+      }
+    }
+  }
+
+@mixin card-img($breakpoints){
+  @if $breakpoints == large{
+    @media (min-width:1200px) and (max-width:1500px){
+          height: 100%;
+          border-radius: 16px;
+    }
+  }
+}
+/*like-button*/
+@mixin like-button($breakpoints){
+  @if $breakpoints == large {
+    @media (min-width:850px) and (max-width:1500px){
+      bottom: 10px;
+      right: -23px;
+    }
+  }
+}
+
+@mixin like-1($breakpoints){
+  @if $breakpoints == large {
+    @media (min-width:850px) and (max-width:1500px){
+      font-size: 24px;
+    }
+  }
+}
+/*operations*/
+
+@mixin ol($breakpoints) {
+  @if $breakpoints == large {
+    @media (min-width:850px) and (max-width:1440px) 
+    {  flex-direction: row;
+      justify-content: space-between;
+      }; 
+      }
+
+  @else if $breakpoints == medium{
+    @media (min-width: 545px)
+    { flex-direction: row;
+      justify-content: space-around;
+      padding-inline-start: 1em;}
+  }
+ }
+
+   @mixin li($breakpoints) {
+    @if $breakpoints == large {
+      @media (min-width:1000px) and (max-width:1500px)
+      { margin:0;
+        width: 23%;
+        }; 
+        }
+
+    @else if $breakpoints == medium{
+    @media (min-width: 545px) and (max-width:1000px){
+      width: 31%;
+      padding-left: 63px;
+      font-size: 14px; 
+    }
+   }
+  }
+
+   @mixin operation($breakpoints) {
+    @if $breakpoints == medium {
+      @media (min-width:545px) and (max-width:1500px) 
+      { margin-bottom: 2em;
+        }; 
+        }
+   }
+
+   /*browsing*/
+   @mixin browsing($breakpoints) {
+    @if $breakpoints == medium {
+      @media (min-width: 545px) 
+      { margin-bottom: 3em;
+        height: 13em;
+        }; 
+        }
+   }
+
+
+
+   /*MENU STYLE*/
+
+   /*body*/
+   @mixin restaurant-menu($breakpoints){
+     @if $breakpoints == medium {
+       @media  (min-width:650px){
+        grid-template-areas: 'header header header' 
+                            'figure figure figure' 
+                            'starter dish dessert' 
+                            'button button button' 
+                            'footer footer footer';
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+         
+       }
+     }
+   }
+
+   @mixin restaurant-section($breakpoints){
+    @if $breakpoints == medium {
+      @media  (min-width:650px){
+       width:33vw;
+        
+      }
+    }
+  }

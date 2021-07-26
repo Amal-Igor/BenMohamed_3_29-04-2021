@@ -16,119 +16,134 @@ $like-gradient: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218
  100% { opacity: 1; 
     transform: translateY(0%);}}
 
-.test-item{
-animation: fade 850ms forwards;}
+@media all and (max-width:649px) {
+            .test-item{
+                animation: fade 850ms forwards;}
+                
+                #item-1{
+                    animation-delay: 0ms;
+                }
+                
+                #item-2{
+                    animation-delay: 400ms;
+                }
+                
+                #item-3{
+                    animation-delay: 800ms;
+                }
+                
+                #item-4{
+                    animation-delay: 1200ms;
+                }
+                
+                #item-5{
+                    animation-delay: 1600ms;
+                }
+                
+                #item-6{
+                    animation-delay: 2000ms;
+                }
+                
+                #item-7{
+                    animation-delay: 2400ms;
+                }
+                
+                #item-8{
+                    animation-delay: 2800ms;
+                }
+                
+                #item-9{
+                    animation-delay: 3200ms;
+                }
+                
+                #item-10{
+                    animation-delay: 3600ms;
+                }
+        }
+        
+    
+    
+   
 
-#item-1{
-    animation-delay: 0ms;
-}
-
-#item-2{
-    animation-delay: 400ms;
-}
-
-#item-3{
-    animation-delay: 800ms;
-}
-
-#item-4{
-    animation-delay: 1200ms;
-}
-
-#item-5{
-    animation-delay: 1600ms;
-}
-
-#item-6{
-    animation-delay: 2000ms;
-}
-
-#item-7{
-    animation-delay: 2400ms;
-}
-
-#item-8{
-    animation-delay: 2800ms;
-}
-
-#item-9{
-    animation-delay: 3200ms;
-}
-
-#item-10{
-    animation-delay: 3600ms;
-}
 
 
 
 
  /** ANIMATIONS DES COEURS **/ 
+/* 
 @keyframes like-2-test{
     0%{
-    visibility: visible;
-    opacity: 0.4;
     font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: $primary;
+    background: $like-gradient;
+    opacity: .4;
+
+        }
+    
+    50%{
+    font-size:15px;
     background: $primary;
     background: $like-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-        }
-    
-    50%{
-    opacity:.8;
-    font-size:15px;
-        }
-    
+    opacity: .8;
+   
+
+    }
     100%{
-    opacity: 1;
-    font-size:19px;
     font-weight: bold;
+    opacity: 1;
     background: $primary;
     background: $like-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
         
     }
+   */ 
 @keyframes like-test {
         0% {
           font-weight: bold;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          visibility: visible;
+        }
+
+        50%{
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;}
+    
+        100% {
+          font-weight: bold;
+          opacity: 1;
           background: $primary;
           background: $like-gradient;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          opacity: 0;
-          font-size: 18px;
-          visibility: inherit;
-        }
-
-        90%{
-            transform: scale(1.1);
-            transition: transform 150ms;
-            
-        }
-        100% {
-          font-weight: bold;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          opacity: 1;
-          font-size: 20px;
-          transform: scale(1);
+          transition: opacity 1s;
+          visibility: visible;
         }}
-        
+      
 .__like-button:hover{
     .--like2{
         visibility: visible;
-        animation: like-2-test 100ms forwards;
+        animation: like-2-test 500ms forwards;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .--like1{
-        animation: like-test 75ms 225ms forwards;
+       animation: like-test 350ms 250ms ease-in-out;
         visibility: hidden;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
 .--like1{
     font-size: 20px;
+    @include like-1(large);
 }
 
 .--like2{
@@ -143,6 +158,36 @@ animation: fade 850ms forwards;}
     -webkit-box-shadow: 3px 10px 20px 7px rgba(0,0,0,0.34); 
     -webkit-box-shadow: 3px 10px 20px 1px rgba(0,0,0,0.34); 
     box-shadow: 3px 10px 20px 1px rgba(0,0,0,0.34);
-    transition: box-shadow 200ms;
+    transition: box-shadow 250ms;
 }
 
+
+/*ANIMATION INDEX RESPONSIVE */
+
+@keyframes card-hover-desktop{
+    0%{ }
+    100%{
+        border-radius: 16px 16px 0 0;}
+}
+
+@media all and (min-width: 1200px) and (max-width:1500px) {
+    .restaurant-card:hover .rest-pic{
+        animation: card-hover-desktop 850ms forwards ;
+        height: 74%;
+        transition: height 850ms ease;
+        
+    }
+}
+
+/*ANIMATION MENU RESPONSIVE*/
+@media all and (min-width:650px){
+    @for $i from 1 through 10 {
+        .menu-section article:nth-child(#{$i}n) {
+            animation-delay: #{$i * 0.5}s;
+        }
+
+        .test-item{
+            animation: fade 950ms forwards;
+    }
+    
+}}
