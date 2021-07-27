@@ -69,6 +69,7 @@
 }
 /** ANIMATIONS DES COEURS **/
 /* 
+
 @keyframes like-2-test{
     0%{
     font-weight: bold;
@@ -100,43 +101,73 @@
 
     }
    */
+/*
 @keyframes like-test {
-  0% {
-    font-weight: bold;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+        0% {
+          font-weight: bold;
+          background: $primary;
+          background: $like-gradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          visibility: visible;
+        }
+
+        50%{
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;}
+
+        100% {
+          font-weight: bold;
+          background: $primary;
+          background: $like-gradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          visibility: visible;
+        }}
+   */
+@media screen and (min-width: 850px) and (max-width: 1500px) {
+  .__like-button:hover .--like2 {
     visibility: visible;
-  }
-  50% {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  100% {
-    font-weight: bold;
-    opacity: 1;
     background: #9356DC;
     background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
+    font-size: 24px;
+    opacity: 1;
+    transition: opacity 650ms, font-size 350ms;
+    font-weight: bold;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: opacity 1s;
-    visibility: visible;
+  }
+  .__like-button:hover .--like1 {
+    visibility: hidden;
+  }
+
+  .--like2 {
+    font-size: 21px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
   }
 }
 .__like-button:hover .--like2 {
   visibility: visible;
-  animation: like-2-test 500ms forwards;
+  background: #9356DC;
+  background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
+  font-size: 20px;
+  opacity: 1;
+  transition: opacity 650ms, font-size 350ms;
+  font-weight: bold;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .__like-button:hover .--like1 {
-  animation: like-test 350ms 250ms ease-in-out;
   visibility: hidden;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .--like1 {
   font-size: 20px;
+  font-weight: 100;
+  -webkit-background-clip: text;
+  opacity: 1;
 }
 @media (min-width: 850px) and (max-width: 1500px) {
   .--like1 {
@@ -146,7 +177,9 @@
 
 .--like2 {
   font-size: 13px;
-  visibility: hidden;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 
 /* ANIMATIONS BOUTONS */
@@ -251,6 +284,27 @@
 
   .test-item {
     animation: fade 950ms forwards;
+  }
+}
+/*MENU-IPAD*/
+@keyframes menu-detail {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-150%);
+  }
+  66% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+@media all and (min-width: 650px) and (max-width: 880px) {
+  .test-item:hover .--long-detail {
+    animation: menu-detail 10s infinite 400ms;
+    display: inherit;
   }
 }
 
