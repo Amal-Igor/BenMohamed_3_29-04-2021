@@ -198,7 +198,7 @@ footer {
   justify-content: center;
   align-items: center;
   border: none;
-  background: white;
+  background-color: white;
 }
 .__like-button .__like-icon {
   position: absolute;

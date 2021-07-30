@@ -131,7 +131,7 @@ $like-gradient: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218
 
    @media screen and (min-width:850px) and (max-width:1500px){
     .__like-button:hover{
-        .--like2{
+        .-like2{
             visibility: visible;
             background: $primary;
             background: $like-gradient;
@@ -143,12 +143,12 @@ $like-gradient: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218
             -webkit-text-fill-color: transparent;
         }
     
-        .--like1{
+        .-like1{
             visibility: hidden;
         }
     }
 
-    .--like2{
+    .-like2{
         font-size: 21px;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -158,7 +158,7 @@ $like-gradient: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218
    }
 
 .__like-button:hover{
-    .--like2{
+    .-like2{
         visibility: visible;
         background: $primary;
         background: $like-gradient;
@@ -170,12 +170,12 @@ $like-gradient: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218
         -webkit-text-fill-color: transparent;
     }
 
-    .--like1{
+    .-like1{
         visibility: hidden;
     }
 }
 
-.--like1{
+.-like1{
     font-size: 20px;
     font-weight: 100;
     -webkit-background-clip: text;
@@ -184,7 +184,7 @@ $like-gradient: linear-gradient(225deg, rgba(147,86,220,1) 16%, rgba(255,121,218
     
 }
 
-.--like2{
+.-like2{
     font-size: 13px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

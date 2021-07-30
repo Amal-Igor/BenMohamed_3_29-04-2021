@@ -1,16 +1,4 @@
-/*HEADER+FOOTER*/
-/*header*/
-/*INDEX*/
-/*searchbear*/
-/*card-restaurant*/
-/*like-button*/
-/*operations*/
-/*browsing*/
-/*MENU STYLE*/
-/*body*/
-/*@mixin like-1{animation: like-test 950ms 100ms forwards;}*/
-/*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
-/* VARIABLES */
+
 /* ANIMATIONS MENUS */
 
 @keyframes fade {
@@ -61,67 +49,13 @@
     animation-delay: 3600ms;
   }
 }
-/** ANIMATIONS DES COEURS **/
-/* 
-
-@keyframes like-2-test{
-    0%{
-    font-weight: bold;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background: $primary;
-    background: $like-gradient;
-    opacity: .4;
-
-        }
-
-    50%{
-    font-size:15px;
-    background: $primary;
-    background: $like-gradient;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: .8;
+/* ANIMATIONS DES COEURS */
 
 
-    }
-    100%{
-    font-weight: bold;
-    opacity: 1;
-    background: $primary;
-    background: $like-gradient;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;}
 
-    }
-   */
-/*
-@keyframes like-test {
-        0% {
-          font-weight: bold;
-          background: $primary;
-          background: $like-gradient;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          visibility: visible;
-        }
-
-        50%{
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;}
-
-        100% {
-          font-weight: bold;
-          background: $primary;
-          background: $like-gradient;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          visibility: visible;
-        }}
-   */
 @media screen and (min-width: 850px) and (max-width: 1500px) {
-.__like-button:hover .--like2 {
-    visibility: visible;
+  .__like-button:hover .-like2 {
+     visibility: visible;
     background: #9356DC;
     background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
     font-size: 24px;
@@ -131,18 +65,20 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-.__like-button:hover .--like1 {
+
+  .__like-button:hover .-like1 {
     visibility: hidden;
   }
 
-  .--like2 {
+  .-like2 {
     font-size: 21px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
   }
 }
-.__like-button:hover .--like2{
+
+.__like-button:hover .-like2{
   visibility: visible;
   background: #9356DC;
   background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
@@ -153,23 +89,18 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.__like-button:hover .--like1 {
+.__like-button:hover .-like1 {
   visibility: hidden;
 }
 
-.--like1 {
-  font-size: 20px;
+.-like1 {
+  font-size: 24px;
   font-weight: 100;
   -webkit-background-clip: text;
   opacity: 1;
 }
-@media (min-width: 850px) and (max-width: 1500px) {
-  .--like1 {
-    font-size: 24px;
-  }
-}
 
-.--like2 {
+.-like2 {
   font-size: 13px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -177,7 +108,7 @@
 }
 
 /* ANIMATIONS BOUTONS */
-.--button:hover {
+.-button:hover {
   background: linear-gradient(354deg, rgba(147, 86, 220, 0.8270131658) 13%, #ff79da 100%);
   -webkit-box-shadow: 3px 10px 20px 7px rgba(0, 0, 0, 0.34);
   -webkit-box-shadow: 3px 10px 20px 1px rgba(0, 0, 0, 0.34);
@@ -261,7 +192,7 @@
   }
 }
 @media all and (min-width: 650px) and (max-width: 880px) {
-  .test-item:hover .--long-detail {
+  .test-item:hover .-long-detail {
     animation: menu-detail 5s forwards 400ms;
     display: inherit;
   }
