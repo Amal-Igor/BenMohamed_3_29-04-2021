@@ -12,24 +12,18 @@
 /*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
 /* VARIABLES */
 /* ANIMATIONS MENUS */
+
 @keyframes fade {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+  from {opacity: 0; transform: translateY(50%);}
+  to {opacity: 1; transform: translateY(0%);}
 }
+
 @media all and (max-width: 649px) {
   .test-item {
     animation: fade 850ms forwards;
   }
 
-  #item-1 {
-    animation-delay: 0ms;
-  }
+  
 
   #item-2 {
     animation-delay: 400ms;
@@ -126,7 +120,7 @@
         }}
    */
 @media screen and (min-width: 850px) and (max-width: 1500px) {
-  .__like-button:hover .--like2 {
+.__like-button:hover .--like2 {
     visibility: visible;
     background: #9356DC;
     background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
@@ -137,7 +131,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .__like-button:hover .--like1 {
+.__like-button:hover .--like1 {
     visibility: hidden;
   }
 
@@ -148,7 +142,7 @@
     opacity: 0;
   }
 }
-.__like-button:hover .--like2 {
+.__like-button:hover .--like2{
   visibility: visible;
   background: #9356DC;
   background: linear-gradient(225deg, #9356dc 16%, #ff79da 100%);
@@ -192,6 +186,7 @@
 }
 
 /*ANIMATION INDEX RESPONSIVE */
+
 @keyframes card-hover-desktop {
   100% {
     border-radius: 16px 16px 0 0;
@@ -210,9 +205,7 @@
     animation-delay: 0.5s;
   }
 
-  .test-item {
-    animation: fade 950ms forwards;
-  }
+  
 
   .menu-section article:nth-child(2n) {
     animation-delay: 1s;
@@ -226,84 +219,50 @@
     animation-delay: 1.5s;
   }
 
-  .test-item {
-    animation: fade 950ms forwards;
-  }
-
   .menu-section article:nth-child(4n) {
     animation-delay: 2s;
-  }
-
-  .test-item {
-    animation: fade 950ms forwards;
   }
 
   .menu-section article:nth-child(5n) {
     animation-delay: 2.5s;
   }
 
-  .test-item {
-    animation: fade 950ms forwards;
-  }
-
   .menu-section article:nth-child(6n) {
     animation-delay: 3s;
-  }
-
-  .test-item {
-    animation: fade 950ms forwards;
   }
 
   .menu-section article:nth-child(7n) {
     animation-delay: 3.5s;
   }
-
-  .test-item {
-    animation: fade 950ms forwards;
-  }
-
   .menu-section article:nth-child(8n) {
     animation-delay: 4s;
   }
 
-  .test-item {
-    animation: fade 950ms forwards;
-  }
 
   .menu-section article:nth-child(9n) {
     animation-delay: 4.5s;
-  }
-
-  .test-item {
-    animation: fade 950ms forwards;
   }
 
   .menu-section article:nth-child(10n) {
     animation-delay: 5s;
   }
 
-  .test-item {
-    animation: fade 950ms forwards;
-  }
 }
 /*MENU-IPAD*/
 @keyframes menu-detail {
   0% {
     transform: translateX(0);
   }
-  33% {
-    transform: translateX(-150%);
-  }
-  66% {
-    transform: translateX(0);
+  50% {
+    transform: translateX(-85%);
   }
   100% {
-    transform: translateX(-150%);
+    transform: translateX(0);
   }
 }
 @media all and (min-width: 650px) and (max-width: 880px) {
   .test-item:hover .--long-detail {
-    animation: menu-detail 10s infinite 400ms;
+    animation: menu-detail 5s forwards 400ms;
     display: inherit;
   }
 }
