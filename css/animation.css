@@ -185,7 +185,7 @@
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-85%);
+    transform: translateX(calc(-85% - 20%));
   }
   100% {
     transform: translateX(0);
@@ -193,7 +193,7 @@
 }
 @media all and (min-width: 650px) and (max-width: 880px) {
   .test-item:hover .-long-detail {
-    animation: menu-detail 5s forwards 400ms;
+    animation: menu-detail 7s forwards 400ms;
     display: inherit;
   }
 }

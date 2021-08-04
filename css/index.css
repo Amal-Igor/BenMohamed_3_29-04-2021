@@ -32,6 +32,8 @@ body {
   background-color: #eaeaea;
   border: none;
   background-image: linear-gradient(#b7b7b7, #eaeaea 10%);
+  padding-right: 48px;
+font-size: 17px;
 }
 .searchbar::placeholder {
   color: black;

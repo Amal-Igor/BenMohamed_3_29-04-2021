@@ -121,6 +121,7 @@ footer {
   font-size: 18px;
   margin: 0;
   margin-bottom: 1em;
+  padding-left: 0.8em;
 }
 .menu-section .menu-header::before {
   content: "";
@@ -213,7 +214,8 @@ footer {
   flex-wrap: nowrap;
   margin: 7px 6px;
   height: 4.1em;
-  width: 96%;
+  width: 93%;
+  margin-left: .9em;
   overflow: hidden;
   border-radius: 12px;
   animation: fade 850ms forwards;
@@ -260,7 +262,7 @@ footer {
 }
 .test-item:hover .checkbox__icon {
   visibility: inherit;
-  transform: rotate(360deg);
+  transform: rotate(-360deg);
 }
 .test-item .checkbox__icon {
   transition: transform 400ms ease-in-out;
