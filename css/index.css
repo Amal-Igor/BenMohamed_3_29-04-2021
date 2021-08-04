@@ -74,6 +74,11 @@ font-size: 17px;
   width: 70%;
   text-align: center;
 }
+
+.sub-sec-head {
+  margin-left: .6em;
+}
+
 .browsing p {
   color: #5c5757;
   font-size: 18px;
