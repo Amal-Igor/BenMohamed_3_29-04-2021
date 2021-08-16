@@ -13,7 +13,6 @@
 /*@mixin like-2{visibility: visible;    animation: like-test 1500ms forwards;}*/
 * {
   box-sizing: border-box;
-  max-width: 1500px;
 }
 
 body {
@@ -125,6 +124,12 @@ font-size: 17px;
     padding-inline-start: 1em;
   }
 }
+
+@media all (min-width: 1500px) {
+  li {
+    width: 16%;
+  }
+}
 .operation li::before {
   content: counter(li);
   color: white;
@@ -201,6 +206,11 @@ li {
   }
 }
 
+@media (min-width: 1501px){
+  li {
+    width: 16%;
+  }
+}
 li:active {
   background-color: rgba(147, 86, 220, 0.2);
 }
